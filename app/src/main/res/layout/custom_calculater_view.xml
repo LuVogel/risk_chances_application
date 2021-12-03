@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:gravity="center_horizontal"
+    android:divider="@color/black"
+    android:dividerHeight="1dip"
+    android:showDividers="middle"
+    android:orientation="horizontal"
+    tools:ignore="UselessParent">
+
+    <TextView
+        android:id="@+id/attacker_count_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/defender_count_textView"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:layout_height="match_parent"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/attacker_loss_textView"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/defender_loss_textView"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        />
+    <TextView
+        android:id="@+id/winning_probability_textView_attacker"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/winning_probability_textView_defender"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:layout_height="match_parent" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_toast_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:divider="@color/black"
+    android:showDividers="end"
+    android:dividerHeight="1dip">
+
+    <ImageButton
+        android:id="@+id/returnToCalculationActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:contentDescription="TODO"
+        android:minWidth="32dp"
+        android:minHeight="32dp"
+        android:src="@drawable/return_button"
+        tools:ignore="SpeakableTextPresentCheck"></ImageButton>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Chose field of interest">
+
+    </TextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp">
+    </View>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/calculatedListView"
+        tools:context=".activity.ResultOfCalculationActivity">
+    </ListView>
+
+
+</LinearLayout>
