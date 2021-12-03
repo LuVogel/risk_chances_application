@@ -15,10 +15,9 @@ import com.example.risk_helper.R;
 public class InputFieldActivity extends AppCompatActivity {
 
 
-    EditText attack_field1_editText, defend_field1_editText, attack_field2_editText,
-            defend_field2_editText, attack_field3_editText, defend_field3_editText,
-            attack_field4_editText, defend_field4_editText, attack_field5_editText,
-            defend_field5_editText, attack_field6_editText, defend_field6_editText;
+    EditText attack_field1_editText, defend_field1_editText, defend_field2_editText,
+            defend_field3_editText, defend_field4_editText, defend_field5_editText,
+            defend_field6_editText;
     Button calculate_button;
 
     @Override
@@ -27,31 +26,33 @@ public class InputFieldActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input_field);
         attack_field1_editText = findViewById(R.id.attacker_text_view1);
         defend_field1_editText = findViewById(R.id.defender_text_view_1);
-        attack_field2_editText = findViewById(R.id.attacker_text_view2);
         defend_field2_editText = findViewById(R.id.defender_text_view_2);
-        attack_field3_editText = findViewById(R.id.attacker_text_view3);
         defend_field3_editText = findViewById(R.id.defender_text_view_3);
-        attack_field4_editText = findViewById(R.id.attacker_text_view4);
         defend_field4_editText = findViewById(R.id.defender_text_view_4);
-        attack_field5_editText = findViewById(R.id.attacker_text_view5);
         defend_field5_editText = findViewById(R.id.defender_text_view_5);
-        attack_field6_editText = findViewById(R.id.attacker_text_view6);
         defend_field6_editText = findViewById(R.id.defender_text_view_6);
         calculate_button = findViewById(R.id.calculate_button);
 
         calculate_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int attacker_field1 = 0, attacker_field2 = 0, attacker_field3 = 0, attacker_field4 = 0,
-                        attacker_field5 = 0, attacker_field6 = 0, defender_field1 = 0, defender_field2 = 0,
+                int attacker_field1 = 0, defender_field1 = 0, defender_field2 = 0,
                         defender_field3 = 0, defender_field4 = 0, defender_field5 = 0, defender_field6 = 0;
 
-                assert (attacker_field1 <=75) &&  (attacker_field2 <=75) &&
-                        (attacker_field3 <=75) &&  (attacker_field4 <=75) &&
-                        (attacker_field5 <=75) &&  (attacker_field6 <=75) &&
-                        (defender_field1 <=75) &&  (defender_field2 <=75) &&
-                        (defender_field3 <=75) &&  (defender_field4 <=75) &&
+                assert (attacker_field1 <=75) && (defender_field1 <=75) &&  (defender_field2 <=75)
+                        && (defender_field3 <=75) &&  (defender_field4 <=75) &&
                         (defender_field5 <=75) &&  (defender_field6 <=75);
+
+
+                //TODO: delete, just for testcase
+                attack_field1_editText.setText("1");
+                defend_field1_editText.setText("1");
+                defend_field2_editText.setText("2");
+                defend_field3_editText.setText("3");
+                defend_field4_editText.setText("4");
+                defend_field5_editText.setText("5");
+                defend_field6_editText.setText("6");
+
 
                 if (attack_field1_editText.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Enter at least Attacking Units for Field 1", Toast.LENGTH_LONG);
@@ -61,31 +62,6 @@ public class InputFieldActivity extends AppCompatActivity {
                     try {
                         attacker_field1 = Integer.parseInt(attack_field1_editText.getText().toString());
                         defender_field1 = Integer.parseInt(defend_field1_editText.getText().toString());
-                        if (attack_field2_editText.getText().toString().isEmpty()) {
-                            attacker_field2 = 0;
-                        } else {
-                            attacker_field2 = Integer.parseInt(attack_field2_editText.getText().toString());
-                        }
-                        if (attack_field3_editText.getText().toString().isEmpty()) {
-                            attacker_field3 = 0;
-                        } else {
-                            attacker_field3 = Integer.parseInt(attack_field3_editText.getText().toString());
-                        }
-                        if (attack_field4_editText.getText().toString().isEmpty()) {
-                            attacker_field4 = 0;
-                        } else {
-                            attacker_field4 = Integer.parseInt(attack_field4_editText.getText().toString());
-                        }
-                        if (attack_field5_editText.getText().toString().isEmpty()) {
-                            attacker_field3 = 0;
-                        } else {
-                            attacker_field5 = Integer.parseInt(attack_field5_editText.getText().toString());
-                        }
-                        if (attack_field6_editText.getText().toString().isEmpty()) {
-                            attacker_field6 = 0;
-                        } else {
-                            attacker_field6 = Integer.parseInt(attack_field6_editText.getText().toString());
-                        }
                         if (defend_field2_editText.getText().toString().isEmpty()) {
                             defender_field2 = 0;
                         } else {
@@ -115,8 +91,9 @@ public class InputFieldActivity extends AppCompatActivity {
                         e.printStackTrace();
                         Toast.makeText(getApplicationContext(), "Enter Attacking and Defending Units for Field 1", Toast.LENGTH_SHORT);
                     }
-                    int[] attackerArray = new int[]{attacker_field1, attacker_field2,
-                            attacker_field3, attacker_field4, attacker_field5, attacker_field6};
+
+
+                    int[] attackerArray = new int[]{attacker_field1};
                     int[] defenderArray = new int[]{defender_field1,defender_field2,
                             defender_field3, defender_field4, defender_field5, defender_field6};
 

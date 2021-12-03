@@ -6,6 +6,7 @@ public class CalculatedListView implements Serializable {
 
     private String attackerCount, defenderCount, winningProbabilityAttacker,
             winningProbabilityDefender, remainingAttacker, remainingDefender;
+    InformationForWar information;
 
 
 
@@ -16,6 +17,7 @@ public class CalculatedListView implements Serializable {
         this.winningProbabilityDefender = informationForWar.getDef_win_name();
         this.remainingAttacker = informationForWar.getRemaining_att_name();
         this.remainingDefender = informationForWar.getRemaining_def_name();
+        this.information = informationForWar;
     }
 
     public String getAttackerCount() {
@@ -60,5 +62,9 @@ public class CalculatedListView implements Serializable {
 
     public void setRemainingDefender(String remainingDefender) {
         this.remainingDefender = remainingDefender;
+    }
+
+    public InformationForWar getInformationForWar() {
+        return information;
     }
 }

@@ -17,17 +17,19 @@
 
     </TextView>
 
+
     <!--Input for first Field-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/infoForAttackerText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Attacking Units on Field 1: " />
+            android:text="Attacking Units on Field: " />
 
         <EditText
             android:id="@+id/attacker_text_view1"
@@ -50,7 +52,7 @@
             android:id="@+id/infoForDefenderText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Defending Units on Field 1: " />
+            android:text="Defending Units on Field 1: " />
 
         <EditText
             android:id="@+id/defender_text_view_1"
@@ -70,35 +72,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/infoForAttackerText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Input Attacking Units on Field 2: " />
-
-        <EditText
-            android:id="@+id/attacker_text_view2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
             android:id="@+id/infoForDefenderText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Defending Units on Field 2: " />
+            android:text="Defending Units on Field 2: " />
 
         <EditText
             android:id="@+id/defender_text_view_2"
@@ -120,34 +97,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/infoForAttackerText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Input Attacking Units on Field 3: " />
-
-        <EditText
-            android:id="@+id/attacker_text_view3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
             android:id="@+id/infoForDefenderText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Defending Units on Field 3: " />
+            android:text="Defending Units on Field 3: " />
 
         <EditText
             android:id="@+id/defender_text_view_3"
@@ -169,34 +122,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/infoForAttackerText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Input Attacking Units on Field 4: " />
-
-        <EditText
-            android:id="@+id/attacker_text_view4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
             android:id="@+id/infoForDefenderText4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Defending Units on Field 4: " />
+            android:text="Defending Units on Field 4: " />
 
         <EditText
             android:id="@+id/defender_text_view_4"
@@ -217,33 +146,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/infoForAttackerText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Input Attacking Units on Field 5: " />
-
-        <EditText
-            android:id="@+id/attacker_text_view5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
             android:id="@+id/infoForDefenderText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Defending Units on Field 5: " />
+            android:text="Defending Units on Field 5: " />
 
         <EditText
             android:id="@+id/defender_text_view_5"
@@ -264,34 +170,10 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/infoForAttackerText6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Input Attacking Units on Field 6: " />
-
-        <EditText
-            android:id="@+id/attacker_text_view6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
             android:id="@+id/infoForDefenderText6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input Defending Units on Field 6: " />
+            android:text="Defending Units on Field 6: " />
 
         <EditText
             android:id="@+id/defender_text_view_6"

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.risk_helper.R;
 import com.example.risk_helper.other.InformationForWar;
 import com.example.risk_helper.other.IntentPackage;
+import com.example.risk_helper.other.IntentPackageWar;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,8 +32,8 @@ public class SpecificFieldActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_specific_field);
         Intent intent = getIntent();
-        IntentPackage intentPackage =
-                (IntentPackage) intent.getSerializableExtra("currentInformation");
+        IntentPackageWar intentPackage =
+                (IntentPackageWar) intent.getSerializableExtra("currentInformation");
         InformationForWar informationForWar = intentPackage.getInformationForWar();
 
         attackerSpecificField = findViewById(R.id.attacker_specific_field);
@@ -61,7 +62,7 @@ public class SpecificFieldActivity extends AppCompatActivity {
                 InformationForWar information =
                         readFileWithProbabilities(informationForWar.getAttack_name(),
                                 informationForWar.getDefend_name());
-                IntentPackage intentPackage_temp = new IntentPackage(information);
+                IntentPackageWar intentPackage_temp = new IntentPackageWar(information);
                 Intent intent_temp = new Intent(SpecificFieldActivity.this,
                         SpecificFieldActivity.class);
                 intent_temp.putExtra("currentInformation", intentPackage_temp);

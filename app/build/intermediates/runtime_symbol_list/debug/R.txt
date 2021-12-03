@@ -1915,11 +1915,6 @@ int id attacker_count_textView 0x7f080053
 int id attacker_loss_textView 0x7f080054
 int id attacker_specific_field 0x7f080204
 int id attacker_text_view1 0x7f080055
-int id attacker_text_view2 0x7f0801e6
-int id attacker_text_view3 0x7f0801e7
-int id attacker_text_view4 0x7f0801e8
-int id attacker_text_view5 0x7f0801e9
-int id attacker_text_view6 0x7f0801ea
 int id attacker_win_specific_field 0x7f080205
 int id auto 0x7f080056
 int id autoComplete 0x7f080057
@@ -2066,11 +2061,6 @@ int id immediateStop 0x7f0800de
 int id included 0x7f0800df
 int id info 0x7f0800e0
 int id infoForAttackerText1 0x7f0801f0
-int id infoForAttackerText2 0x7f0801f1
-int id infoForAttackerText3 0x7f0801f2
-int id infoForAttackerText4 0x7f0801f3
-int id infoForAttackerText5 0x7f0801f4
-int id infoForAttackerText6 0x7f0801f5
 int id infoForDefenderText1 0x7f0801f6
 int id infoForDefenderText2 0x7f0801f7
 int id infoForDefenderText3 0x7f0801f8

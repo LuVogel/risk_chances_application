@@ -1916,11 +1916,6 @@ id attacker_count_textView
 id attacker_loss_textView
 id attacker_specific_field
 id attacker_text_view1
-id attacker_text_view2
-id attacker_text_view3
-id attacker_text_view4
-id attacker_text_view5
-id attacker_text_view6
 id attacker_win_specific_field
 id auto
 id autoComplete
@@ -2067,11 +2062,6 @@ id immediateStop
 id included
 id info
 id infoForAttackerText1
-id infoForAttackerText2
-id infoForAttackerText3
-id infoForAttackerText4
-id infoForAttackerText5
-id infoForAttackerText6
 id infoForDefenderText1
 id infoForDefenderText2
 id infoForDefenderText3

@@ -15,6 +15,7 @@ import com.example.risk_helper.other.CalculatedListView;
 import com.example.risk_helper.other.CalculatedListViewAdapter;
 import com.example.risk_helper.other.InformationForWar;
 import com.example.risk_helper.other.IntentPackage;
+import com.example.risk_helper.other.IntentPackageWar;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,12 +38,13 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
         IntentPackage intentPackage = (IntentPackage) intent.getSerializableExtra("count");
         int[] attackerArray = intentPackage.getAttacker();
         int[] defenderArray = intentPackage.getDefender();
-        int attacker1 = attackerArray[0], attacker2 = attackerArray[1],
-                attacker3 = attackerArray[2], attacker4 = attackerArray[3],
-                attacker5 = attackerArray[4], attacker6 = attackerArray[5];
+        int attacker1 = attackerArray[0];
         int defender1 = defenderArray[0], defender2 = defenderArray[1],
                 defender3 = defenderArray[2], defender4 = defenderArray[3],
                 defender5 = defenderArray[4], defender6 = defenderArray[5];
+
+
+
 
         InformationForWar informationField1 = readFileWithProbabilities(attacker1, defender1);
         CalculatedListView calculatedListViewField1 = new CalculatedListView(informationField1);
@@ -61,28 +63,28 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
         calculatedList.add(headerForFields);
         calculatedList.add(calculatedListViewField1);
 
-        if (attacker2 != 0 && defender2 != 0) {
-            informationField2 = readFileWithProbabilities(attacker2, defender2);
+        if (defender2 != 0) {
+            informationField2 = readFileWithProbabilities(attacker1, defender2);
             calculatedListViewField2 = new CalculatedListView(informationField2);
             calculatedList.add(calculatedListViewField2);
         }
-        if (attacker3 != 0 && defender3 != 0) {
-            informationField3 = readFileWithProbabilities(attacker3, defender3);
+        if (defender3 != 0) {
+            informationField3 = readFileWithProbabilities(attacker1, defender3);
             calculatedListViewField3 = new CalculatedListView(informationField3);
             calculatedList.add(calculatedListViewField3);
         }
-        if (attacker4 != 0 && defender4 != 0) {
-            informationField4 = readFileWithProbabilities(attacker4, defender4);
+        if (defender4 != 0) {
+            informationField4 = readFileWithProbabilities(attacker1, defender4);
             calculatedListViewField4 = new CalculatedListView(informationField4);
             calculatedList.add(calculatedListViewField4);
         }
-        if (attacker5 != 0 && defender5 != 0) {
-            informationField5 = readFileWithProbabilities(attacker5, defender5);
+        if (defender5 != 0) {
+            informationField5 = readFileWithProbabilities(attacker1, defender5);
             calculatedListViewField5 = new CalculatedListView(informationField5);
             calculatedList.add(calculatedListViewField5);
         }
-        if (attacker6 != 0 && defender6 != 0) {
-            informationField6 = readFileWithProbabilities(attacker6, defender6);
+        if (defender6 != 0) {
+            informationField6 = readFileWithProbabilities(attacker1, defender6);
             calculatedListViewField6 = new CalculatedListView(informationField6);
             calculatedList.add(calculatedListViewField6);
         }
@@ -97,12 +99,12 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
        resultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               InformationForWar currentInformation =
-                       (InformationForWar) parent.getItemAtPosition(position);
-               IntentPackage intentPackage = new IntentPackage(currentInformation);
-               Intent intent = new Intent(ResultOfCalculationActivity.this, SpecificFieldActivity.class);
-               intent.putExtra("currentInformation", intentPackage);
-               startActivity(intent);
+               //TODO: parent.getItemAtPosition returns listviewadapter?
+               CalculatedListView currentCalculatedView = (CalculatedListView) parent.getItemAtPosition(position);
+               IntentPackageWar intentPackageWar = new IntentPackageWar(currentCalculatedView.getInformationForWar());
+               Intent intent_wars = new Intent(ResultOfCalculationActivity.this, SpecificFieldActivity.class);
+               intent_wars.putExtra("currentInformation", intentPackageWar);
+               startActivity(intent_wars);
            }
        });
 
@@ -125,7 +127,7 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
                 if (attacker == Integer.parseInt(splitString[0]) && defender == Integer.parseInt(splitString[1])) {
                     return new InformationForWar(splitString[0], splitString[1],
                             splitString[2], splitString[3],
-                            splitString[4], splitString[5]);
+                            splitString[4]+"%", splitString[5]+"%");
                 }
             }
         } catch (IOException e) {
