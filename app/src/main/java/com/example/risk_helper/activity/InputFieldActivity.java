@@ -45,13 +45,15 @@ public class InputFieldActivity extends AppCompatActivity {
 
 
                 //TODO: delete, just for testcase
-                attack_field1_editText.setText("1");
+                /**
+                attack_field1_editText.setText("5");
                 defend_field1_editText.setText("1");
                 defend_field2_editText.setText("2");
                 defend_field3_editText.setText("3");
                 defend_field4_editText.setText("4");
                 defend_field5_editText.setText("5");
                 defend_field6_editText.setText("6");
+                 */
 
 
                 if (attack_field1_editText.getText().toString().isEmpty()) {

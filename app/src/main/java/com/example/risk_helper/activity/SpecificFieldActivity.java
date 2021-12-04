@@ -35,6 +35,8 @@ public class SpecificFieldActivity extends AppCompatActivity {
         IntentPackageWar intentPackage =
                 (IntentPackageWar) intent.getSerializableExtra("currentInformation");
         InformationForWar informationForWar = intentPackage.getInformationForWar();
+        int attacker = Integer.parseInt(informationForWar.getAttack_name());
+        int defender = Integer.parseInt(informationForWar.getDefend_name());
 
         attackerSpecificField = findViewById(R.id.attacker_specific_field);
         defenderSpecificField = findViewById(R.id.defender_specific_field);
@@ -56,11 +58,41 @@ public class SpecificFieldActivity extends AppCompatActivity {
         attackerWinSpecificField.setText(informationForWar.getAtt_win_name());
         defenderWinSpecificField.setText(informationForWar.getDef_win_name());
 
+        // Show Buttons depending on current state
+        // starting with all buttons invisible
+        subDefendTwo.setVisibility(View.INVISIBLE);
+        subDefendOne.setVisibility(View.INVISIBLE);
+        subBothOne.setVisibility(View.INVISIBLE);
+        subAttackTwo.setVisibility(View.INVISIBLE);
+        subAttackOne.setVisibility(View.INVISIBLE);
+
+        if (attacker == 2 && defender == 1) {
+            subAttackOne.setVisibility(View.VISIBLE);
+        } else if (attacker >= 3 && defender == 1) {
+            subAttackOne.setVisibility(View.VISIBLE);
+        } else if (attacker == 1 && defender >= 2) {
+            subDefendOne.setVisibility(View.VISIBLE);
+        } else if (attacker == 2 && defender == 2) {
+            subBothOne.setVisibility(View.VISIBLE);
+        } else if (attacker == 2 && defender > 2) {
+            subBothOne.setVisibility(View.VISIBLE);
+            subDefendTwo.setVisibility(View.VISIBLE);
+        } else if (attacker >= 3 && defender == 2) {
+            subBothOne.setVisibility(View.VISIBLE);
+            subAttackTwo.setVisibility(View.VISIBLE);
+        } else if (attacker >= 3 && defender > 2) {
+            subBothOne.setVisibility(View.VISIBLE);
+            subAttackTwo.setVisibility(View.VISIBLE);
+            subDefendTwo.setVisibility(View.VISIBLE);
+        }
+
+
         subAttackOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
                 InformationForWar information =
-                        readFileWithProbabilities(informationForWar.getAttack_name(),
+                        readFileWithProbabilities(currentAttacker,
                                 informationForWar.getDefend_name());
                 IntentPackageWar intentPackage_temp = new IntentPackageWar(information);
                 Intent intent_temp = new Intent(SpecificFieldActivity.this,
@@ -74,17 +106,77 @@ public class SpecificFieldActivity extends AppCompatActivity {
             }
         });
 
+        subAttackTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-2);
+                InformationForWar information =
+                        readFileWithProbabilities(currentAttacker,
+                                informationForWar.getDefend_name());
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+        });
 
+        subBothOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
+                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
+                InformationForWar information =
+                        readFileWithProbabilities(currentAttacker, currentDefender);
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+        });
 
+        subDefendOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
+                InformationForWar information =
+                        readFileWithProbabilities(informationForWar.getAttack_name(),
+                                currentDefender);
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+        });
 
-
-
-
-
-
-
-
-
+        subDefendTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-2);
+                InformationForWar information =
+                        readFileWithProbabilities(informationForWar.getAttack_name(),
+                                currentDefender);
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+        });
 
 
     }
@@ -99,7 +191,7 @@ public class SpecificFieldActivity extends AppCompatActivity {
                 if (attacker.equals(splitString[0]) && defender.equals(splitString[1])) {
                     return new InformationForWar(splitString[0], splitString[1],
                             splitString[2], splitString[3],
-                            splitString[4], splitString[5]);
+                            splitString[4] + "%", splitString[5] + "%");
                 }
             }
         } catch (IOException e) {

@@ -2,7 +2,9 @@ package com.example.risk_helper.other;
 
 import android.icu.text.IDNA;
 
-public class InformationForWar {
+import java.io.Serializable;
+
+public class InformationForWar implements Serializable {
 
 
     String attack_name, defend_name, remaining_att_name, remaining_def_name, att_win_name,

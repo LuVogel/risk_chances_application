@@ -160,40 +160,48 @@
 
         <ImageButton
             android:id="@+id/subAttackTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/sub_two">
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@drawable/sub_two"
+            android:contentDescription="TODO">
 
         </ImageButton>
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/subAttackOne"
-            tools:src="@drawable/sub_one">
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@drawable/sub_one"
+            android:contentDescription="TODO">
 
         </ImageButton>
 
         <ImageButton
             android:id="@+id/subEachOne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/both_min_one">
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:src="@drawable/both_min_one"
+            android:contentDescription="TODO">
 
         </ImageButton>
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/subDefendOne"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            tools:ignore="SpeakableTextPresentCheck"
             tools:src="@drawable/sub_one">
 
         </ImageButton>
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/subDefendTwo"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            tools:ignore="SpeakableTextPresentCheck"
             tools:src="@drawable/sub_two">
 
         </ImageButton>
