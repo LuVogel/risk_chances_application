@@ -8,47 +8,54 @@
     android:gravity="center_horizontal"
     android:divider="@color/black"
     android:dividerHeight="1dip"
+    android:weightSum="1"
     android:showDividers="middle"
     android:orientation="horizontal"
     tools:ignore="UselessParent">
 
     <TextView
         android:id="@+id/attacker_count_textView"
-        android:layout_width="match_parent"
+        android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_weight="0.2"
+        android:layout_weight="0.1"
+        android:fontFamily="@font/quick_hand"
         android:gravity="center"
         />
 
     <TextView
         android:id="@+id/defender_count_textView"
-        android:layout_width="match_parent"
-        android:layout_weight="0.2"
+        android:layout_width="0dip"
+        android:layout_weight="0.1"
+        android:fontFamily="@font/quick_hand"
         android:layout_height="match_parent"
         android:gravity="center"/>
     <TextView
         android:id="@+id/attacker_loss_textView"
-        android:layout_width="match_parent"
+        android:layout_width="0dip"
         android:layout_weight="0.2"
+        android:fontFamily="@font/quick_hand"
         android:gravity="center"
         android:layout_height="match_parent" />
     <TextView
         android:id="@+id/defender_loss_textView"
-        android:layout_width="match_parent"
+        android:layout_width="0dip"
         android:layout_weight="0.2"
+        android:fontFamily="@font/quick_hand"
         android:gravity="center"
         android:layout_height="match_parent"
         />
     <TextView
         android:id="@+id/winning_probability_textView_attacker"
-        android:layout_width="match_parent"
+        android:layout_width="0dip"
         android:layout_weight="0.2"
+        android:fontFamily="@font/quick_hand"
         android:gravity="center"
         android:layout_height="match_parent" />
     <TextView
         android:id="@+id/winning_probability_textView_defender"
-        android:layout_width="match_parent"
+        android:layout_width="0dip"
         android:layout_weight="0.2"
+        android:fontFamily="@font/quick_hand"
         android:gravity="center"
         android:layout_height="match_parent" />
 

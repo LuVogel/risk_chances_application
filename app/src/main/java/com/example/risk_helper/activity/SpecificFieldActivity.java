@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.risk_helper.R;
 import com.example.risk_helper.other.InformationForWar;
-import com.example.risk_helper.other.IntentPackage;
 import com.example.risk_helper.other.IntentPackageWar;
 
 import java.io.BufferedReader;
@@ -22,7 +20,7 @@ import java.io.InputStreamReader;
 
 public class SpecificFieldActivity extends AppCompatActivity {
 
-    ImageButton returnToResultOfCalculationActivity, subAttackOne, subDefendOne, subBothOne,
+    ImageButton goFromSpecificFieldToResultButton, subAttackOne, subDefendOne, subBothOne,
             subAttackTwo, subDefendTwo;
     TextView attackerSpecificField, defenderSpecificField, attackerWinSpecificField,
             defenderWinSpecificField, remainingAttackerSpecificField, remainingDefenderSpecificField;
@@ -40,7 +38,7 @@ public class SpecificFieldActivity extends AppCompatActivity {
 
         attackerSpecificField = findViewById(R.id.attacker_specific_field);
         defenderSpecificField = findViewById(R.id.defender_specific_field);
-        returnToResultOfCalculationActivity = findViewById(R.id.returnToResultOfCalculation);
+        goFromSpecificFieldToResultButton = findViewById(R.id.return_from_specific_field_to_field_list_button);
         attackerWinSpecificField = findViewById(R.id.attacker_win_specific_field);
         defenderWinSpecificField = findViewById(R.id.defender_win_specific_field);
         remainingAttackerSpecificField = findViewById(R.id.remaining_attacker_specific_field);
@@ -87,95 +85,84 @@ public class SpecificFieldActivity extends AppCompatActivity {
         }
 
 
-        subAttackOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
-                InformationForWar information =
-                        readFileWithProbabilities(currentAttacker,
-                                informationForWar.getDefend_name());
-                IntentPackageWar intentPackage_temp = new IntentPackageWar(information);
-                Intent intent_temp = new Intent(SpecificFieldActivity.this,
-                        SpecificFieldActivity.class);
-                intent_temp.putExtra("currentInformation", intentPackage_temp);
-                finish();
-                overridePendingTransition(0,0);
-                startActivity(intent_temp);
-                overridePendingTransition(0,0);
+        subAttackOne.setOnClickListener(v -> {
+            String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
+            InformationForWar information =
+                    readFileWithProbabilities(currentAttacker,
+                            informationForWar.getDefend_name());
+            IntentPackageWar intentPackage_temp = new IntentPackageWar(information);
+            Intent intent_temp = new Intent(SpecificFieldActivity.this,
+                    SpecificFieldActivity.class);
+            intent_temp.putExtra("currentInformation", intentPackage_temp);
+            finish();
+            overridePendingTransition(0,0);
+            startActivity(intent_temp);
+            overridePendingTransition(0,0);
 
-            }
         });
 
-        subAttackTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-2);
-                InformationForWar information =
-                        readFileWithProbabilities(currentAttacker,
-                                informationForWar.getDefend_name());
-                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-                Intent intent1 = new Intent(SpecificFieldActivity.this,
-                        SpecificFieldActivity.class);
-                intent1.putExtra("currentInformation", intentPackageWar);
-                finish();
-                overridePendingTransition(0,0);
-                startActivity(intent1);
-                overridePendingTransition(0,0);
-            }
+        subAttackTwo.setOnClickListener(v -> {
+            String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-2);
+            InformationForWar information =
+                    readFileWithProbabilities(currentAttacker,
+                            informationForWar.getDefend_name());
+            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+            Intent intent1 = new Intent(SpecificFieldActivity.this,
+                    SpecificFieldActivity.class);
+            intent1.putExtra("currentInformation", intentPackageWar);
+            finish();
+            overridePendingTransition(0,0);
+            startActivity(intent1);
+            overridePendingTransition(0,0);
         });
 
-        subBothOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
-                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
-                InformationForWar information =
-                        readFileWithProbabilities(currentAttacker, currentDefender);
-                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-                Intent intent1 = new Intent(SpecificFieldActivity.this,
-                        SpecificFieldActivity.class);
-                intent1.putExtra("currentInformation", intentPackageWar);
-                finish();
-                overridePendingTransition(0,0);
-                startActivity(intent1);
-                overridePendingTransition(0,0);
-            }
+        subBothOne.setOnClickListener(v -> {
+            String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
+            String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
+            InformationForWar information =
+                    readFileWithProbabilities(currentAttacker, currentDefender);
+            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+            Intent intent1 = new Intent(SpecificFieldActivity.this,
+                    SpecificFieldActivity.class);
+            intent1.putExtra("currentInformation", intentPackageWar);
+            finish();
+            overridePendingTransition(0,0);
+            startActivity(intent1);
+            overridePendingTransition(0,0);
         });
 
-        subDefendOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
-                InformationForWar information =
-                        readFileWithProbabilities(informationForWar.getAttack_name(),
-                                currentDefender);
-                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-                Intent intent1 = new Intent(SpecificFieldActivity.this,
-                        SpecificFieldActivity.class);
-                intent1.putExtra("currentInformation", intentPackageWar);
-                finish();
-                overridePendingTransition(0,0);
-                startActivity(intent1);
-                overridePendingTransition(0,0);
-            }
+        subDefendOne.setOnClickListener(v -> {
+            String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
+            InformationForWar information =
+                    readFileWithProbabilities(informationForWar.getAttack_name(),
+                            currentDefender);
+            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+            Intent intent1 = new Intent(SpecificFieldActivity.this,
+                    SpecificFieldActivity.class);
+            intent1.putExtra("currentInformation", intentPackageWar);
+            finish();
+            overridePendingTransition(0,0);
+            startActivity(intent1);
+            overridePendingTransition(0,0);
         });
 
-        subDefendTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-2);
-                InformationForWar information =
-                        readFileWithProbabilities(informationForWar.getAttack_name(),
-                                currentDefender);
-                IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-                Intent intent1 = new Intent(SpecificFieldActivity.this,
-                        SpecificFieldActivity.class);
-                intent1.putExtra("currentInformation", intentPackageWar);
-                finish();
-                overridePendingTransition(0,0);
-                startActivity(intent1);
-                overridePendingTransition(0,0);
-            }
+        subDefendTwo.setOnClickListener(v -> {
+            String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-2);
+            InformationForWar information =
+                    readFileWithProbabilities(informationForWar.getAttack_name(),
+                            currentDefender);
+            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
+            Intent intent1 = new Intent(SpecificFieldActivity.this,
+                    SpecificFieldActivity.class);
+            intent1.putExtra("currentInformation", intentPackageWar);
+            finish();
+            overridePendingTransition(0,0);
+            startActivity(intent1);
+            overridePendingTransition(0,0);
+        });
+
+        goFromSpecificFieldToResultButton.setOnClickListener(v -> {
+            finish();
         });
 
 

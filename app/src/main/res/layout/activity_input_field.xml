@@ -2,201 +2,287 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_gravity="center_horizontal"
-    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
     android:background="@drawable/welcome_background720x1280"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:baselineAligned="false">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Enter at least for field 1 Attacking and Defending Units.
-        Maximum Input is 75x75">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:layout_gravity="center_horizontal">
 
-    </TextView>
-
-
-    <!--Input for first Field-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/infoForAttackerText1"
+        <ImageButton
+            android:id="@+id/return_from_input_field_to_main_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Attacking Units on Field: " />
+            android:src="@drawable/return_button"
+            tools:ignore="SpeakableTextPresentCheck">
 
-        <EditText
-            android:id="@+id/attacker_text_view1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+        </ImageButton>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
 
-        <TextView
-            android:id="@+id/infoForDefenderText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defending Units on Field 1: " />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
 
-        <EditText
-            android:id="@+id/defender_text_view_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.2">
 
-    <!--Input for second Field-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/infoForDefenderText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defending Units on Field 2: " />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.6">
 
-        <EditText
-            android:id="@+id/defender_text_view_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/paper_background"
+                    android:orientation="vertical">
 
-    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/quick_hand"
+                        android:text="@string/input_field_1">
+
+                    </TextView>
 
 
-    <!--Input for third field-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+                    <!--Input for first Field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/infoForDefenderText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defending Units on Field 3: " />
+                        <TextView
+                            android:id="@+id/infoForAttackerText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:text="@string/input_field_attacking_units_on_field" />
 
-        <EditText
-            android:id="@+id/defender_text_view_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+                        <EditText
+                            android:id="@+id/attacker_text_view1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            android:fontFamily="@font/quick_hand"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
 
-    </LinearLayout>
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
 
-    <!--Input for fourth field-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/infoForDefenderText1"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:layout_height="wrap_content"
+                            android:text="@string/input_field_defending_units_on_field_1" />
 
-        <TextView
-            android:id="@+id/infoForDefenderText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defending Units on Field 4: " />
+                        <EditText
+                            android:id="@+id/defender_text_view_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            android:fontFamily="@font/quick_hand"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
+                    </LinearLayout>
 
-        <EditText
-            android:id="@+id/defender_text_view_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+                    <!--Input for second Field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
 
-    </LinearLayout>
+                        <TextView
+                            android:id="@+id/infoForDefenderText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:text="@string/input_field_defending_units_on_field_2" />
 
-    <!--Input for fifth field-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/defender_text_view_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:minWidth="48dp"
+                            android:fontFamily="@font/quick_hand"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
 
-        <TextView
-            android:id="@+id/infoForDefenderText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defending Units on Field 5: " />
-
-        <EditText
-            android:id="@+id/defender_text_view_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-    <!--Input for sixth field-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/infoForDefenderText6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defending Units on Field 6: " />
-
-        <EditText
-            android:id="@+id/defender_text_view_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"/>
+                    </LinearLayout>
 
 
-    <Button
-        android:id="@+id/calculate_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate !" />
+                    <!--Input for third field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/infoForDefenderText3"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:layout_height="wrap_content"
+                            android:text="@string/input_field_defending_units_on_field_3" />
+
+                        <EditText
+                            android:id="@+id/defender_text_view_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:fontFamily="@font/quick_hand"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
+
+                    </LinearLayout>
+
+
+                    <!--Input for fourth field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/infoForDefenderText4"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:layout_height="wrap_content"
+                            android:text="@string/input_field_defending_units_on_field_4" />
+
+                        <EditText
+                            android:id="@+id/defender_text_view_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:minWidth="48dp"
+                            android:fontFamily="@font/quick_hand"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
+
+                    </LinearLayout>
+
+                    <!--Input for fifth field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/infoForDefenderText5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:text="@string/input_field_defending_units_on_field_5" />
+
+                        <EditText
+                            android:id="@+id/defender_text_view_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:minWidth="48dp"
+                            android:fontFamily="@font/quick_hand"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
+
+                    </LinearLayout>
+
+                    <!--Input for sixth field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/infoForDefenderText6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quick_hand"
+                            android:text="@string/input_field_defending_units_on_field_6" />
+
+                        <EditText
+                            android:id="@+id/defender_text_view_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            android:fontFamily="@font/quick_hand"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:importantForAutofill="no" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.2"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/calculate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quick_hand"
+                    android:text="@string/calculate_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15">
+
+    </RelativeLayout>
+
 
 </LinearLayout>
+
 

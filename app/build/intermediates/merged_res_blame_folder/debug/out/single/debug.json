@@ -28,6 +28,10 @@
         "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\drawable_paper_background.jpg.flat",
+        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\drawable\\paper_background.jpg"
+    },
+    {
         "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\drawable_next_window_arrow.xml.flat",
         "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\drawable\\next_window_arrow.xml"
     },
@@ -44,12 +48,12 @@
         "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\layout\\activity_help.xml"
     },
     {
-        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_calculater_view.xml.flat",
-        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\layout\\custom_calculater_view.xml"
+        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\font_quick_hand.ttf.flat",
+        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\font\\quick_hand.ttf"
     },
     {
-        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_calculater_view.xml.flat",
+        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\layout\\custom_calculater_view.xml"
     },
     {
         "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -66,6 +70,10 @@
     {
         "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.risk_helper.other.IntentPackage;
@@ -20,6 +21,8 @@ public class InputFieldActivity extends AppCompatActivity {
             defend_field6_editText;
     Button calculate_button;
 
+    ImageButton goFromInputFieldToMainButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,82 +35,110 @@ public class InputFieldActivity extends AppCompatActivity {
         defend_field5_editText = findViewById(R.id.defender_text_view_5);
         defend_field6_editText = findViewById(R.id.defender_text_view_6);
         calculate_button = findViewById(R.id.calculate_button);
+        goFromInputFieldToMainButton = findViewById(R.id.return_from_input_field_to_main_button);
 
-        calculate_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int attacker_field1 = 0, defender_field1 = 0, defender_field2 = 0,
-                        defender_field3 = 0, defender_field4 = 0, defender_field5 = 0, defender_field6 = 0;
-
-                assert (attacker_field1 <=75) && (defender_field1 <=75) &&  (defender_field2 <=75)
-                        && (defender_field3 <=75) &&  (defender_field4 <=75) &&
-                        (defender_field5 <=75) &&  (defender_field6 <=75);
+        calculate_button.setOnClickListener(v -> {
+            int attacker_field1 = 0, defender_field1 = 0, defender_field2 = 0,
+                    defender_field3 = 0, defender_field4 = 0, defender_field5 = 0, defender_field6 = 0;
 
 
-                //TODO: delete, just for testcase
-                /**
-                attack_field1_editText.setText("5");
-                defend_field1_editText.setText("1");
-                defend_field2_editText.setText("2");
-                defend_field3_editText.setText("3");
-                defend_field4_editText.setText("4");
-                defend_field5_editText.setText("5");
-                defend_field6_editText.setText("6");
-                 */
+            //TODO: delete, just for testcase
+            /**
+            attack_field1_editText.setText("5");
+            defend_field1_editText.setText("1");
+            defend_field2_editText.setText("2");
+            defend_field3_editText.setText("3");
+            defend_field4_editText.setText("4");
+            defend_field5_editText.setText("5");
+            defend_field6_editText.setText("6");
+             */
 
 
-                if (attack_field1_editText.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Enter at least Attacking Units for Field 1", Toast.LENGTH_LONG);
-                } else if (defend_field1_editText.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Enter at least Defending Units for Field 1", Toast.LENGTH_LONG);
-                } else {
-                    try {
-                        attacker_field1 = Integer.parseInt(attack_field1_editText.getText().toString());
-                        defender_field1 = Integer.parseInt(defend_field1_editText.getText().toString());
-                        if (defend_field2_editText.getText().toString().isEmpty()) {
-                            defender_field2 = 0;
-                        } else {
-                            defender_field2 = Integer.parseInt(defend_field2_editText.getText().toString());
-                        }
-                        if (defend_field3_editText.getText().toString().isEmpty()) {
-                            defender_field3 = 0;
-                        } else {
-                            defender_field3 = Integer.parseInt(defend_field3_editText.getText().toString());
-                        }
-                        if (defend_field4_editText.getText().toString().isEmpty()) {
-                            defender_field4 = 0;
-                        } else {
-                            defender_field4 = Integer.parseInt(defend_field4_editText.getText().toString());
-                        }
-                        if (defend_field5_editText.getText().toString().isEmpty()) {
-                            defender_field5 = 0;
-                        } else {
-                            defender_field5 = Integer.parseInt(defend_field5_editText.getText().toString());
-                        }
-                        if (defend_field6_editText.getText().toString().isEmpty()) {
-                            defender_field6 = 0;
-                        } else {
-                            defender_field6 = Integer.parseInt(defend_field6_editText.getText().toString());
-                        }
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "Enter Attacking and Defending Units for Field 1", Toast.LENGTH_SHORT);
+            if (attack_field1_editText.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Enter at least Attacking Units for Field 1", Toast.LENGTH_LONG);
+            } else if (defend_field1_editText.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Enter at least Defending Units for Field 1", Toast.LENGTH_LONG);
+            } else {
+                try {
+                    attacker_field1 = Integer.parseInt(attack_field1_editText.getText().toString());
+                    defender_field1 = Integer.parseInt(defend_field1_editText.getText().toString());
+                    if (defend_field2_editText.getText().toString().isEmpty()) {
+                        defender_field2 = 0;
+                    } else {
+                        defender_field2 = Integer.parseInt(defend_field2_editText.getText().toString());
                     }
-
-
-                    int[] attackerArray = new int[]{attacker_field1};
-                    int[] defenderArray = new int[]{defender_field1,defender_field2,
-                            defender_field3, defender_field4, defender_field5, defender_field6};
-
-
-                    Intent intent = new Intent(InputFieldActivity.this, ResultOfCalculationActivity.class);
-                    IntentPackage intentPackage = new IntentPackage(attackerArray, defenderArray);
-                    intent.putExtra("count", intentPackage);
-                    startActivity(intent);
-
+                    if (defend_field3_editText.getText().toString().isEmpty()) {
+                        defender_field3 = 0;
+                    } else {
+                        defender_field3 = Integer.parseInt(defend_field3_editText.getText().toString());
+                    }
+                    if (defend_field4_editText.getText().toString().isEmpty()) {
+                        defender_field4 = 0;
+                    } else {
+                        defender_field4 = Integer.parseInt(defend_field4_editText.getText().toString());
+                    }
+                    if (defend_field5_editText.getText().toString().isEmpty()) {
+                        defender_field5 = 0;
+                    } else {
+                        defender_field5 = Integer.parseInt(defend_field5_editText.getText().toString());
+                    }
+                    if (defend_field6_editText.getText().toString().isEmpty()) {
+                        defender_field6 = 0;
+                    } else {
+                        defender_field6 = Integer.parseInt(defend_field6_editText.getText().toString());
+                    }
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Enter Attacking and Defending Units for Field 1", Toast.LENGTH_SHORT);
                 }
+
+                if (attacker_field1 > 75) {
+                    attacker_field1 = 75;
+                }
+
+                if (defender_field1 > 75) {
+                    defender_field1 = 75;
+                }
+
+                if (defender_field2 > 75) {
+                    defender_field2 = 75;
+                }
+
+                if (defender_field3 > 75) {
+                    defender_field3 = 75;
+                }
+
+                if (defender_field4 > 75) {
+                    defender_field4 = 75;
+                }
+
+                if (defender_field5 > 75) {
+                    defender_field5 = 75;
+                }
+
+                if (defender_field6 > 75) {
+                    defender_field6 = 75;
+                }
+
+                int[] attackerArray = new int[]{attacker_field1};
+                int[] defenderArray = new int[]{defender_field1,defender_field2,
+                        defender_field3, defender_field4, defender_field5, defender_field6};
+
+
+                Intent intent = new Intent(InputFieldActivity.this, ResultOfCalculationActivity.class);
+                IntentPackage intentPackage = new IntentPackage(attackerArray, defenderArray);
+                intent.putExtra("count", intentPackage);
+                startActivity(intent);
+
             }
         });
+
+
+        goFromInputFieldToMainButton.setOnClickListener(v -> {
+            finish();
+        });
+
+
 
     }
 }

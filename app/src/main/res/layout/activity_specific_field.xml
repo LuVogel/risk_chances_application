@@ -1,212 +1,424 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/custom_toast_layout"
-    tools:context=".activity.SpecificFieldActivity"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:divider="@color/black"
-    android:showDividers="end"
-    android:dividerHeight="1dip">
+    android:background="@drawable/welcome_background720x1280"
+    android:baselineAligned="false">
 
-    <ImageButton
-        android:id="@+id/returnToResultOfCalculation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:src="@drawable/return_button" />
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp">
-
-    </View>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Attacker">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/attacker_specific_field">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Defender">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/defender_specific_field">
-
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="remaining Attacker">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/remaining_attacker_specific_field">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="remaining Defender">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/remaining_defender_specific_field">
-
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Attacker Win with:">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/attacker_win_specific_field">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Defender Win with:">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/defender_win_specific_field">
-
-        </TextView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
+        <ImageButton
+            android:id="@+id/return_from_specific_field_to_field_list_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Attacker Side">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="both Minus 1">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Defender Side">
-
-        </TextView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <ImageButton
-            android:id="@+id/subAttackTwo"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:src="@drawable/sub_two"
-            android:contentDescription="TODO">
+            android:contentDescription="@string/todo"
+            android:src="@drawable/return_button"
+            tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck">
 
         </ImageButton>
 
-        <ImageButton
-            android:id="@+id/subAttackOne"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:src="@drawable/sub_one"
-            android:contentDescription="TODO">
+    </RelativeLayout>
 
-        </ImageButton>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
 
-        <ImageButton
-            android:id="@+id/subEachOne"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:src="@drawable/both_min_one"
-            android:contentDescription="TODO">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
 
-        </ImageButton>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.1">
 
-        <ImageButton
-            android:id="@+id/subDefendOne"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:src="@drawable/sub_one">
+            </LinearLayout>
 
-        </ImageButton>
+            <LinearLayout
+                android:id="@+id/custom_toast_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                android:divider="@color/black"
+                android:background="@drawable/paper_background"
+                android:showDividers="end"
+                android:dividerHeight="1dip">
 
-        <ImageButton
-            android:id="@+id/subDefendTwo"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:src="@drawable/sub_two">
 
-        </ImageButton>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp">
 
-    </LinearLayout>
+                </View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:text="@string/attacker"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:text="@string/defender"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:layout_weight="0.5"
+                        >
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:id="@+id/attacker_specific_field"
+                        android:textAlignment="center">
+                    </TextView>
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:id="@+id/defender_specific_field"
+                        android:textAlignment="center">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1"
+                    >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:text="@string/remaining_attacker"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:text="@string/remaining_defender"
+                        android:textAlignment="center">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:id="@+id/remaining_attacker_specific_field">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:id="@+id/remaining_defender_specific_field">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/attacker_win_with">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/defender_win_with">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/quick_hand"
+                        android:id="@+id/attacker_win_specific_field">
+
+                    </TextView>
+                    
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:id="@+id/defender_win_specific_field">
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                </View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/attacker_side_min_2">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/attacker_side_min_1">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/both_minus_1">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/defender_side_min_2">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:text="@string/defender_side_min_1">
+
+                    </TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <ImageButton
+                        android:id="@+id/subAttackTwo"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:contentDescription="@string/todo"
+                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck"
+                        android:src="@drawable/sub_two">
+
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/subAttackOne"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:contentDescription="@string/todo"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:src="@drawable/sub_one">
+
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/subEachOne"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:contentDescription="@string/todo"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:src="@drawable/both_min_one">
+
+                    </ImageButton>
+
+                    <ImageButton
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:src="@drawable/sub_one"
+                        android:id="@+id/subDefendOne">
+
+                    </ImageButton>
+                    <ImageButton
+                        android:id="@+id/subDefendTwo"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:src="@drawable/sub_two"
+                        android:contentDescription="TODO">
+
+                    </ImageButton>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.1">
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15">
+
+    </RelativeLayout>
 
 
 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

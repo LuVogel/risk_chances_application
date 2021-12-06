@@ -43,5 +43,30 @@
         Press a button each time, a dice-war has ended</string>
 
 
+    <string name="input_field_1">Enter at least for field 1 Attacking and Defending Units.
+        Maximum Input is 75x75</string>
+
+    <string name="calculate_button">Calculate</string>
+    <string name="input_field_defending_units_on_field_1">Defending Units on Field 1:</string>
+    <string name="input_field_attacking_units_on_field">Attacking Units on Field:</string>
+    <string name="input_field_defending_units_on_field_2">Defending Units on Field 2:</string>
+    <string name="input_field_defending_units_on_field_3">Defending Units on Field 3:</string>
+    <string name="input_field_defending_units_on_field_4">Defending Units on Field 4:</string>
+    <string name="input_field_defending_units_on_field_5">Defending Units on Field 5:</string>
+    <string name="input_field_defending_units_on_field_6">Defending Units on Field 6:</string>
+    <string name="attacker"># A</string>
+    <string name="defender"># D</string>
+    <string name="remaining_attacker">surv. A</string>
+    <string name="remaining_defender">surv. D</string>
+    <string name="attacker_win_with">P(A win)</string>
+    <string name="both_minus_1">A-1/D-1</string>
+    <string name="defender_win_with">P(D win)</string>
+    <string name="attacker_side_min_2">A-2</string>
+    <string name="attacker_side_min_1">A-1</string>
+    <string name="defender_side_min_2">D-2</string>
+    <string name="defender_side_min_1">D-1</string>
+    <string name="todo">TODO</string>
+    <string name="chose_field_of_interest">Chose field of interest</string>
+
 
 </resources>

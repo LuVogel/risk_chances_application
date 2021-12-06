@@ -1,46 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/custom_toast_layout"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:divider="@color/black"
-    android:showDividers="end"
-    android:dividerHeight="1dip">
+    android:background="@drawable/welcome_background720x1280"
+    android:baselineAligned="false">
 
-    <ImageButton
-        android:id="@+id/returnToCalculationActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:contentDescription="TODO"
-        android:minWidth="32dp"
-        android:minHeight="32dp"
-        android:src="@drawable/return_button"
-        tools:ignore="SpeakableTextPresentCheck"></ImageButton>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Chose field of interest">
-
-    </TextView>
-
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp">
-    </View>
-
-
-    <ListView
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:id="@+id/calculatedListView"
-        tools:context=".activity.ResultOfCalculationActivity">
-    </ListView>
+        android:layout_weight="0.15"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/return_from_result_list_to_input_field_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/return_button"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:contentDescription="@string/todo">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.1">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/custom_toast_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/paper_background"
+                android:divider="@color/dark_red"
+                android:layout_weight="0.8"
+                android:showDividers="end"
+                android:dividerHeight="1dip">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/chose_field_of_interest"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/quick_hand"
+                    android:textSize="25sp"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp">
+                </View>
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/calculatedListView"
+                    tools:context=".activity.ResultOfCalculationActivity">
+                </ListView>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.2">
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15">
+
+    </RelativeLayout>
 
 
 </LinearLayout>
+
+

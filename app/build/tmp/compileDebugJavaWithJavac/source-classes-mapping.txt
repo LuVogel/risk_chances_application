@@ -8,25 +8,16 @@ com/example/risk_helper/BuildConfig.java
  com.example.risk_helper.BuildConfig
 com/example/risk_helper/other/IntentPackage.java
  com.example.risk_helper.other.IntentPackage
-com/example/risk_helper/activity/ResultOfCalculationActivity.java
- com.example.risk_helper.activity.ResultOfCalculationActivity
- com.example.risk_helper.activity.ResultOfCalculationActivity$1
- com.example.risk_helper.activity.ResultOfCalculationActivity$2
+com/example/risk_helper/activity/MainActivity.java
+ com.example.risk_helper.activity.MainActivity
+ com.example.risk_helper.activity.MainActivity$1
 com/example/risk_helper/activity/InputFieldActivity.java
  com.example.risk_helper.activity.InputFieldActivity
- com.example.risk_helper.activity.InputFieldActivity$1
 com/example/risk_helper/other/CalculatedListViewAdapter.java
  com.example.risk_helper.other.CalculatedListViewAdapter
 com/example/risk_helper/activity/SpecificFieldActivity.java
  com.example.risk_helper.activity.SpecificFieldActivity
- com.example.risk_helper.activity.SpecificFieldActivity$1
- com.example.risk_helper.activity.SpecificFieldActivity$2
- com.example.risk_helper.activity.SpecificFieldActivity$3
- com.example.risk_helper.activity.SpecificFieldActivity$4
- com.example.risk_helper.activity.SpecificFieldActivity$5
 com/example/risk_helper/activity/HelpActivity.java
  com.example.risk_helper.activity.HelpActivity
-com/example/risk_helper/activity/MainActivity.java
- com.example.risk_helper.activity.MainActivity
- com.example.risk_helper.activity.MainActivity$1
- com.example.risk_helper.activity.MainActivity$2
+com/example/risk_helper/activity/ResultOfCalculationActivity.java
+ com.example.risk_helper.activity.ResultOfCalculationActivity

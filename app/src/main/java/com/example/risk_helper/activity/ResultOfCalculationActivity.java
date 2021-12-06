@@ -26,7 +26,8 @@ import java.util.ArrayList;
 public class ResultOfCalculationActivity extends AppCompatActivity {
 
 
-    ImageButton returnToInputFieldActivity;
+    ImageButton goFromResultListBackToInputFieldButton;
+
 
 
     @Override
@@ -55,10 +56,10 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
 
         ArrayList<CalculatedListView> calculatedList = new ArrayList<CalculatedListView>();
 
-        InformationForWar headerForWar = new InformationForWar("Attacker",
-                "Defender", "remaining Attacker",
-                "remaining Defender", "Probability Attacker Win",
-                "Probability Defender Win");
+        InformationForWar headerForWar = new InformationForWar("#A",
+                "#D", "surv. A",
+                "surv. D", "P(A_win)",
+                "P(D_win)");
         CalculatedListView headerForFields = new CalculatedListView(headerForWar);
         calculatedList.add(headerForFields);
         calculatedList.add(calculatedListViewField1);
@@ -90,31 +91,22 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
         }
 
 
-        returnToInputFieldActivity = findViewById(R.id.returnToCalculationActivity);
+        goFromResultListBackToInputFieldButton = findViewById(R.id.return_from_result_list_to_input_field_button);
 
         CalculatedListViewAdapter calculatedListViewAdapter = new CalculatedListViewAdapter(this, calculatedList);
         ListView resultListView = findViewById(R.id.calculatedListView);
         resultListView.setAdapter(calculatedListViewAdapter);
 
-       resultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-           @Override
-           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               //TODO: parent.getItemAtPosition returns listviewadapter?
-               CalculatedListView currentCalculatedView = (CalculatedListView) parent.getItemAtPosition(position);
-               IntentPackageWar intentPackageWar = new IntentPackageWar(currentCalculatedView.getInformationForWar());
-               Intent intent_wars = new Intent(ResultOfCalculationActivity.this, SpecificFieldActivity.class);
-               intent_wars.putExtra("currentInformation", intentPackageWar);
-               startActivity(intent_wars);
-           }
+       resultListView.setOnItemClickListener((parent, view, position, id) -> {
+           CalculatedListView currentCalculatedView = (CalculatedListView) parent.getItemAtPosition(position);
+           IntentPackageWar intentPackageWar = new IntentPackageWar(currentCalculatedView.getInformationForWar());
+           Intent intent_wars = new Intent(ResultOfCalculationActivity.this, SpecificFieldActivity.class);
+           intent_wars.putExtra("currentInformation", intentPackageWar);
+           startActivity(intent_wars);
        });
 
 
-        returnToInputFieldActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ResultOfCalculationActivity.super.onBackPressed();
-            }
-        });
+        goFromResultListBackToInputFieldButton.setOnClickListener(v -> finish());
     }
 
     public InformationForWar readFileWithProbabilities(int attacker, int defender) {
