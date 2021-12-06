@@ -1,39 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    android:layout_width="match_parent"
+    android:background="@drawable/welcome_background720x1280">
+
 
     <TextView
-        android:id="@+id/welcome_textView"
-        android:layout_width="wrap_content"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginBottom="44dp"
-        android:text="Welcome Screen"
-        app:layout_constraintBottom_toTopOf="@+id/welcome_next_WindowButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:id="@+id/welcome_continue_textView"
+        android:text="Continue"
+        android:background="@drawable/welcome_buttons_background"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textStyle="bold">
 
-    <ImageButton
-        android:id="@+id/welcome_next_WindowButton"
-        android:layout_width="wrap_content"
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp">
+
+    </View>
+
+
+    <TextView
+        android:layout_width="105dp"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
-        android:layout_marginStart="181dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="352dp"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_textView"
-        app:srcCompat="@drawable/next_window_arrow"
-        tools:ignore="SpeakableTextPresentCheck" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/welcome_help_textView"
+        android:text="Help"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@drawable/welcome_buttons_background"
+        android:textSize="20sp"
+        android:padding="10dp">
+
+    </TextView>
+
+</LinearLayout>

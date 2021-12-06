@@ -1,3 +1,47 @@
 <resources>
-    <string name="app_name">Risk_helper</string>
+    <string name="app_name">RISK - probability calculator</string>
+
+    <string name="help_overall1">Welcome to the Guide for the app \"RISK - probability
+        calculator\"</string>
+    <string name="help_overall2">For RISK-rules, please have a look at the rulebook, delivered with
+        the game. </string>
+    <string name="help_overall3">Important for this app is to know how a war works. In a war is a
+        player attacking a field from another player. From the RISK rules, there is given, that an
+        attacker can attack with at most three dices and a defender defend with at most two
+        dices. After each throw of the dices, a dice-war ends. This is important, since now the
+        probabilities that someone wins, is going to be updated.</string>
+
+    <string name="help_field1">Enter your attacking units, as well as defending units which are
+        located on the fields, which you\'re planning to attack.</string>
+    <string name="help_field2">You must fill in at least your attacking units and the defending
+        units for field number 1. If the entered number one a field  is bigger than 75, then the units
+        on this field will be set to 75.</string>
+    <string name="help_field3">After all troops are entered as wished, press Calculate</string>
+
+    <string name="help_calculation1">For each defending field which was entered before, there is
+        now a line shown with following values: </string>
+    <string name="help_calculation2">Number of Attacker, Number of Defender, Number of expected
+        remaining Attackers, Number of expected remaining Defenders, Probability that Attacker
+        wins, Probability that Defender wins</string>
+    <string name="help_calculation3">Caution: If the probability that one side wins is 100\% and the
+        other 0%, means not that one can not loose. The probability for the 0\% part is just small
+        enough that it has to be rounded to 0 and therefore the counter-probability is 100.</string>
+    <string name="help_calculation4">Choose one line which you\'re going to attack. Press this line
+        and the next screen will open</string>
+
+    <string name="help_playAndPress1">On top are the same values as before in the list, but now
+        only for the chosen field.</string>
+    <string name="help_playAndPress2">Depending on current Attacker and Defender are multiple
+        buttons shown.</string>
+    <string name="help_playAndPress3">The two buttons on the left side, are pressed if the attacker
+        lost one or two armies.</string>
+    <string name="help_playAndPress4">The two buttons on the right side are pressed if the defender
+        lost one or two armies.</string>
+    <string name="help_playAndPress5">The button in the middle is pressed if both sides lost one
+        army.</string>
+    <string name="help_playAndPress6">After each button-press, the values above will be updated.
+        Press a button each time, a dice-war has ended</string>
+
+
+
 </resources>
