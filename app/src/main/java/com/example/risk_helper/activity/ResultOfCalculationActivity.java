@@ -58,8 +58,8 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
 
         InformationForWar headerForWar = new InformationForWar("#A",
                 "#D", "surv. A",
-                "surv. D", "P(A_win)",
-                "P(D_win)");
+                "surv. D", "Win A",
+                "Win D");
         CalculatedListView headerForFields = new CalculatedListView(headerForWar);
         calculatedList.add(headerForFields);
         calculatedList.add(calculatedListViewField1);
@@ -99,7 +99,7 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
 
        resultListView.setOnItemClickListener((parent, view, position, id) -> {
            CalculatedListView currentCalculatedView = (CalculatedListView) parent.getItemAtPosition(position);
-           IntentPackageWar intentPackageWar = new IntentPackageWar(currentCalculatedView.getInformationForWar());
+           IntentPackageWar intentPackageWar = new IntentPackageWar(currentCalculatedView.getInformationForWar(), intentPackage);
            Intent intent_wars = new Intent(ResultOfCalculationActivity.this, SpecificFieldActivity.class);
            intent_wars.putExtra("currentInformation", intentPackageWar);
            startActivity(intent_wars);

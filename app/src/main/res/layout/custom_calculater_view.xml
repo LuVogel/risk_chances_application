@@ -19,6 +19,8 @@
         android:layout_height="match_parent"
         android:layout_weight="0.1"
         android:fontFamily="@font/quick_hand"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         android:gravity="center"
         />
 
@@ -28,6 +30,8 @@
         android:layout_weight="0.1"
         android:fontFamily="@font/quick_hand"
         android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         android:gravity="center"/>
     <TextView
         android:id="@+id/attacker_loss_textView"
@@ -35,6 +39,8 @@
         android:layout_weight="0.2"
         android:fontFamily="@font/quick_hand"
         android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         android:layout_height="match_parent" />
     <TextView
         android:id="@+id/defender_loss_textView"
@@ -42,6 +48,8 @@
         android:layout_weight="0.2"
         android:fontFamily="@font/quick_hand"
         android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         android:layout_height="match_parent"
         />
     <TextView
@@ -49,6 +57,8 @@
         android:layout_width="0dip"
         android:layout_weight="0.2"
         android:fontFamily="@font/quick_hand"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         android:gravity="center"
         android:layout_height="match_parent" />
     <TextView
@@ -56,6 +66,8 @@
         android:layout_width="0dip"
         android:layout_weight="0.2"
         android:fontFamily="@font/quick_hand"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         android:gravity="center"
         android:layout_height="match_parent" />
 

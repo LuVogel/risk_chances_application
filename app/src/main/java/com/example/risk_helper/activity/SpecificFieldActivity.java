@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.risk_helper.R;
 import com.example.risk_helper.other.InformationForWar;
+import com.example.risk_helper.other.IntentPackage;
 import com.example.risk_helper.other.IntentPackageWar;
+import com.example.risk_helper.other.IntentPackageWin;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,9 +33,10 @@ public class SpecificFieldActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_specific_field);
         Intent intent = getIntent();
-        IntentPackageWar intentPackage =
+        IntentPackageWar intentPackageWar1 =
                 (IntentPackageWar) intent.getSerializableExtra("currentInformation");
-        InformationForWar informationForWar = intentPackage.getInformationForWar();
+        InformationForWar informationForWar = intentPackageWar1.getInformationForWar();
+        IntentPackage intentPackageForWar = intentPackageWar1.getIntentPackageFromWar();
         int attacker = Integer.parseInt(informationForWar.getAttack_name());
         int defender = Integer.parseInt(informationForWar.getDefend_name());
 
@@ -64,21 +68,25 @@ public class SpecificFieldActivity extends AppCompatActivity {
         subAttackTwo.setVisibility(View.INVISIBLE);
         subAttackOne.setVisibility(View.INVISIBLE);
 
+        if (attacker == 1 && defender == 1) {
+            subAttackOne.setVisibility(View.VISIBLE);
+            subDefendOne.setVisibility(View.VISIBLE);
+        }
         if (attacker == 2 && defender == 1) {
             subAttackOne.setVisibility(View.VISIBLE);
+            subDefendOne.setVisibility(View.VISIBLE);
+
         } else if (attacker >= 3 && defender == 1) {
             subAttackOne.setVisibility(View.VISIBLE);
+            subDefendOne.setVisibility(View.VISIBLE);
         } else if (attacker == 1 && defender >= 2) {
             subDefendOne.setVisibility(View.VISIBLE);
-        } else if (attacker == 2 && defender == 2) {
-            subBothOne.setVisibility(View.VISIBLE);
-        } else if (attacker == 2 && defender > 2) {
+            subAttackOne.setVisibility(View.VISIBLE);
+        } else if (attacker == 2 && defender >= 2) {
             subBothOne.setVisibility(View.VISIBLE);
             subDefendTwo.setVisibility(View.VISIBLE);
-        } else if (attacker >= 3 && defender == 2) {
-            subBothOne.setVisibility(View.VISIBLE);
             subAttackTwo.setVisibility(View.VISIBLE);
-        } else if (attacker >= 3 && defender > 2) {
+        } else if (attacker >= 3 && defender >= 2) {
             subBothOne.setVisibility(View.VISIBLE);
             subAttackTwo.setVisibility(View.VISIBLE);
             subDefendTwo.setVisibility(View.VISIBLE);
@@ -86,83 +94,140 @@ public class SpecificFieldActivity extends AppCompatActivity {
 
 
         subAttackOne.setOnClickListener(v -> {
-            String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
-            InformationForWar information =
-                    readFileWithProbabilities(currentAttacker,
-                            informationForWar.getDefend_name());
-            IntentPackageWar intentPackage_temp = new IntentPackageWar(information);
-            Intent intent_temp = new Intent(SpecificFieldActivity.this,
-                    SpecificFieldActivity.class);
-            intent_temp.putExtra("currentInformation", intentPackage_temp);
-            finish();
-            overridePendingTransition(0,0);
-            startActivity(intent_temp);
-            overridePendingTransition(0,0);
+            if (Integer.parseInt(informationForWar.getAttack_name())-1 == 0) {
+                //Defender has won!
+                Intent intent1 = new Intent(SpecificFieldActivity.this, WinningActivity.class);
+                IntentPackageWin intentPackageWin = new IntentPackageWin("Defender");
+                intent1.putExtra("winner", intentPackageWin);
+                startActivity(intent1);
+            } else {
+                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
+                InformationForWar information =
+                        readFileWithProbabilities(currentAttacker,
+                                informationForWar.getDefend_name());
+                IntentPackageWar intentPackage_temp = new IntentPackageWar(information, intentPackageForWar);
+                Intent intent_temp = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent_temp.putExtra("currentInformation", intentPackage_temp);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent_temp);
+                overridePendingTransition(0,0);
+            }
+
 
         });
 
         subAttackTwo.setOnClickListener(v -> {
-            String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-2);
-            InformationForWar information =
-                    readFileWithProbabilities(currentAttacker,
-                            informationForWar.getDefend_name());
-            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-            Intent intent1 = new Intent(SpecificFieldActivity.this,
-                    SpecificFieldActivity.class);
-            intent1.putExtra("currentInformation", intentPackageWar);
-            finish();
-            overridePendingTransition(0,0);
-            startActivity(intent1);
-            overridePendingTransition(0,0);
+            if (Integer.parseInt(informationForWar.getAttack_name())-2 == 0) {
+                //Defender has won!
+                Intent intent1 = new Intent(SpecificFieldActivity.this, WinningActivity.class);
+                IntentPackageWin intentPackageWin = new IntentPackageWin("Defender");
+                intent1.putExtra("winner", intentPackageWin);
+                startActivity(intent1);
+            } else {
+                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-2);
+                InformationForWar information =
+                        readFileWithProbabilities(currentAttacker,
+                                informationForWar.getDefend_name());
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information, intentPackageForWar);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+
         });
 
         subBothOne.setOnClickListener(v -> {
-            String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
-            String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
-            InformationForWar information =
-                    readFileWithProbabilities(currentAttacker, currentDefender);
-            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-            Intent intent1 = new Intent(SpecificFieldActivity.this,
-                    SpecificFieldActivity.class);
-            intent1.putExtra("currentInformation", intentPackageWar);
-            finish();
-            overridePendingTransition(0,0);
-            startActivity(intent1);
-            overridePendingTransition(0,0);
+            if (Integer.parseInt(informationForWar.getDefend_name())-1 == 0) {
+                //Attacker has won!
+                Intent intent1 = new Intent(SpecificFieldActivity.this, WinningActivity.class);
+                IntentPackageWin intentPackageWin = new IntentPackageWin("Attacker");
+                intent1.putExtra("winner", intentPackageWin);
+                startActivity(intent1);
+            } else if (Integer.parseInt(informationForWar.getAttack_name())-1 == 0) {
+                //Defender has won!
+                Intent intent1 = new Intent(SpecificFieldActivity.this, WinningActivity.class);
+                IntentPackageWin intentPackageWin = new IntentPackageWin("Defender");
+                intent1.putExtra("winner", intentPackageWin);
+                startActivity(intent1);
+            } else {
+                String currentAttacker = String.valueOf(Integer.parseInt(informationForWar.getAttack_name())-1);
+                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
+                InformationForWar information =
+                        readFileWithProbabilities(currentAttacker, currentDefender);
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information, intentPackageForWar);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+
         });
 
         subDefendOne.setOnClickListener(v -> {
-            String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
-            InformationForWar information =
-                    readFileWithProbabilities(informationForWar.getAttack_name(),
-                            currentDefender);
-            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-            Intent intent1 = new Intent(SpecificFieldActivity.this,
-                    SpecificFieldActivity.class);
-            intent1.putExtra("currentInformation", intentPackageWar);
-            finish();
-            overridePendingTransition(0,0);
-            startActivity(intent1);
-            overridePendingTransition(0,0);
+            if (Integer.parseInt(informationForWar.getDefend_name())-1 == 0) {
+                //Attacker has won!
+                Intent intent1 = new Intent(SpecificFieldActivity.this, WinningActivity.class);
+                IntentPackageWin intentPackageWin = new IntentPackageWin("Attacker");
+                intent1.putExtra("winner", intentPackageWin);
+                startActivity(intent1);
+            } else {
+                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-1);
+                InformationForWar information =
+                        readFileWithProbabilities(informationForWar.getAttack_name(),
+                                currentDefender);
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information, intentPackageForWar);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+
         });
 
         subDefendTwo.setOnClickListener(v -> {
-            String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-2);
-            InformationForWar information =
-                    readFileWithProbabilities(informationForWar.getAttack_name(),
-                            currentDefender);
-            IntentPackageWar intentPackageWar = new IntentPackageWar(information);
-            Intent intent1 = new Intent(SpecificFieldActivity.this,
-                    SpecificFieldActivity.class);
-            intent1.putExtra("currentInformation", intentPackageWar);
-            finish();
-            overridePendingTransition(0,0);
-            startActivity(intent1);
-            overridePendingTransition(0,0);
+            if (Integer.parseInt(informationForWar.getDefend_name())-2 == 0) {
+                //Attacker has won!
+                Intent intent1 = new Intent(SpecificFieldActivity.this, WinningActivity.class);
+                IntentPackageWin intentPackageWin = new IntentPackageWin("Attacker");
+                intent1.putExtra("winner", intentPackageWin);
+                startActivity(intent1);
+            } else {
+                String currentDefender = String.valueOf(Integer.parseInt(informationForWar.getDefend_name())-2);
+                InformationForWar information =
+                        readFileWithProbabilities(informationForWar.getAttack_name(),
+                                currentDefender);
+                IntentPackageWar intentPackageWar = new IntentPackageWar(information, intentPackageForWar);
+                Intent intent1 = new Intent(SpecificFieldActivity.this,
+                        SpecificFieldActivity.class);
+                intent1.putExtra("currentInformation", intentPackageWar);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent1);
+                overridePendingTransition(0,0);
+            }
+
         });
 
         goFromSpecificFieldToResultButton.setOnClickListener(v -> {
+            Intent backIntent = new Intent(SpecificFieldActivity.this,
+                    ResultOfCalculationActivity.class);
+            intent.putExtra("count", intentPackageForWar);
             finish();
+            overridePendingTransition(0,0);
+            startActivity(backIntent);
+            overridePendingTransition(0,0);
         });
 
 

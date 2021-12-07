@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Risk_helper">
         <activity
+            android:name=".activity.WinningActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.HelpActivity"
             android:exported="true" />
         <activity

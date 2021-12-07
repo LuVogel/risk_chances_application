@@ -19,6 +19,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Risk_helper" >
         <activity
+            android:name="com.example.risk_helper.activity.WinningActivity"
+            android:exported="true" />
+        <activity
             android:name="com.example.risk_helper.activity.HelpActivity"
             android:exported="true" />
         <activity

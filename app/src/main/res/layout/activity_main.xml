@@ -10,20 +10,31 @@
     android:background="@drawable/welcome_background720x1280">
 
 
-    <TextView
-        android:layout_width="105dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/welcome_continue_textView"
-        android:text="Continue"
-        android:background="@drawable/welcome_buttons_background"
-        android:textAlignment="center"
-        android:fontFamily="@font/quick_hand"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:padding="10dp"
-        android:textStyle="bold">
 
-    </TextView>
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/paper_background"
+            android:scaleType="fitXY">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/welcome_continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:textSize="20sp"
+            android:text="@string/main_continue"
+            android:fontFamily="@font/quick_hand"
+            android:textColor="@color/black">
+
+        </Button>
+    </FrameLayout>
 
     <View
         android:layout_width="match_parent"
@@ -31,20 +42,35 @@
 
     </View>
 
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="50dp">
 
-    <TextView
-        android:layout_width="105dp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:id="@+id/welcome_help_textView"
-        android:fontFamily="@font/quick_hand"
-        android:text="Help"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:background="@drawable/welcome_buttons_background"
-        android:textSize="20sp"
-        android:padding="10dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/paper_background"
+            android:scaleType="fitXY">
 
-    </TextView>
+        </ImageView>
+
+        <Button
+            android:id="@+id/welcome_help_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:textSize="20sp"
+            android:text="@string/main_help"
+            android:fontFamily="@font/quick_hand"
+            android:textColor="@color/black">
+
+        </Button>
+    </FrameLayout>
+
+
+
+
+
+
 
 </LinearLayout>

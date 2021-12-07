@@ -1266,6 +1266,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color transparent
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -1779,6 +1780,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable congrats
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -1827,6 +1829,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable paper_background
+drawable paper_background_1
 drawable return_button
 drawable sub_one
 drawable sub_two
@@ -2193,6 +2196,7 @@ id return_from_help_to_main_button
 id return_from_input_field_to_main_button
 id return_from_result_list_to_input_field_button
 id return_from_specific_field_to_field_list_button
+id return_from_win_to_main_button
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2329,9 +2333,10 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
-id welcome_continue_textView
-id welcome_help_textView
+id welcome_continue_button
+id welcome_help_button
 id west
+id winner_textView
 id winning_probability_textView_attacker
 id winning_probability_textView_defender
 id withText
@@ -2414,6 +2419,7 @@ layout activity_input_field
 layout activity_main
 layout activity_result_of_calculation
 layout activity_specific_field
+layout activity_winning
 layout custom_calculater_view
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2582,6 +2588,8 @@ string input_field_defending_units_on_field_4
 string input_field_defending_units_on_field_5
 string input_field_defending_units_on_field_6
 string item_view_role_description
+string main_continue
+string main_help
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection

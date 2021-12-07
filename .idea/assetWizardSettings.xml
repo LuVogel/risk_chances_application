@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/casino/baseline_casino_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/celebration/baseline_celebration_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ee0e21" />
-                            <entry key="outputName" value="test" />
+                            <entry key="color" value="eeea0e" />
+                            <entry key="outputName" value="congrats" />
                             <entry key="sourceFile" value="D:\Dokumente\UniBasel\5.Semester\puzzles_and_games\project\project_app" />
                           </map>
                         </option>
