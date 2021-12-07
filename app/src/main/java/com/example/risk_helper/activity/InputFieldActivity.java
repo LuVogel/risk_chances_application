@@ -1,7 +1,9 @@
 package com.example.risk_helper.activity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -55,13 +57,17 @@ public class InputFieldActivity extends AppCompatActivity {
 
 
             if (attack_field1_editText.getText().toString().isEmpty()) {
-                Toast.makeText(getApplicationContext(), "Enter at least Attacking Units for Field 1", Toast.LENGTH_LONG);
-            } else if (defend_field1_editText.getText().toString().isEmpty()) {
-                Toast.makeText(getApplicationContext(), "Enter at least Defending Units for Field 1", Toast.LENGTH_LONG);
+                AlertDialog.Builder dialog = buildDialog(getResources().getString(R.string.alertNoAttacker));
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             } else {
                 try {
                     attacker_field1 = Integer.parseInt(attack_field1_editText.getText().toString());
-                    defender_field1 = Integer.parseInt(defend_field1_editText.getText().toString());
+                    if (defend_field1_editText.getText().toString().isEmpty()) {
+                        defender_field1 = 0;
+                    } else {
+                        defender_field1 = Integer.parseInt(defend_field1_editText.getText().toString());
+                    }
                     if (defend_field2_editText.getText().toString().isEmpty()) {
                         defender_field2 = 0;
                     } else {
@@ -89,46 +95,60 @@ public class InputFieldActivity extends AppCompatActivity {
                     }
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "Enter Attacking and Defending Units for Field 1", Toast.LENGTH_SHORT);
                 }
+                boolean somethingOver75 = false;
 
                 if (attacker_field1 > 75) {
                     attacker_field1 = 75;
+                    somethingOver75 = true;
                 }
-
                 if (defender_field1 > 75) {
                     defender_field1 = 75;
+                    somethingOver75 = true;
                 }
-
                 if (defender_field2 > 75) {
                     defender_field2 = 75;
+                    somethingOver75 = true;
                 }
-
                 if (defender_field3 > 75) {
                     defender_field3 = 75;
+                    somethingOver75 = true;
                 }
-
                 if (defender_field4 > 75) {
                     defender_field4 = 75;
+                    somethingOver75 = true;
                 }
-
                 if (defender_field5 > 75) {
                     defender_field5 = 75;
+                    somethingOver75 = true;
                 }
-
                 if (defender_field6 > 75) {
                     defender_field6 = 75;
+                    somethingOver75 = true;
+                }
+                if (somethingOver75) {
+                    AlertDialog.Builder dialog = buildDialog(getResources().getString(R.string.alertOver75));
+                    AlertDialog alertDialog = dialog.create();
+                    alertDialog.show();
+                } else if (defender_field1 == 0 && defender_field2 == 0 && defender_field3 == 0 &&
+                        defender_field4 == 0 && defender_field5 == 0 && defender_field6 == 0) {
+                    AlertDialog.Builder dialog = buildDialog(getResources().getString(R.string.alertNoDefender));
+                    AlertDialog alertDialog = dialog.create();
+                    alertDialog.show();
+
+                } else {
+                    int[] attackerArray = new int[]{attacker_field1};
+                    int[] defenderArray = new int[]{defender_field1,defender_field2,
+                            defender_field3, defender_field4, defender_field5, defender_field6};
+
+
+                    Intent intent = new Intent(InputFieldActivity.this, ResultOfCalculationActivity.class);
+                    IntentPackage intentPackage = new IntentPackage(attackerArray, defenderArray);
+                    intent.putExtra("count", intentPackage);
+                    startActivity(intent);
                 }
 
-                int[] attackerArray = new int[]{attacker_field1};
-                int[] defenderArray = new int[]{defender_field1,defender_field2,
-                        defender_field3, defender_field4, defender_field5, defender_field6};
 
-
-                Intent intent = new Intent(InputFieldActivity.this, ResultOfCalculationActivity.class);
-                IntentPackage intentPackage = new IntentPackage(attackerArray, defenderArray);
-                intent.putExtra("count", intentPackage);
-                startActivity(intent);
 
             }
         });
@@ -139,6 +159,20 @@ public class InputFieldActivity extends AppCompatActivity {
         });
 
 
+
+    }
+
+    public AlertDialog.Builder buildDialog(String text) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(InputFieldActivity.this);
+        builder.setMessage(text).setTitle(R.string.error);
+
+        builder.setNegativeButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        return builder;
 
     }
 }

@@ -71,4 +71,10 @@
     <string name="main_help">Help</string>
 
 
+    <string name="error">Error</string>
+    <string name="ok">Ok</string>
+    <string name="alertNoDefender">Please enter at least troops for one defender-field</string>
+    <string name="alertNoAttacker">Please enter troops for attacker-field</string>
+    <string name="alertOver75">Input must be smaller than 76, system will set input automatically to 75</string>
+
 </resources>

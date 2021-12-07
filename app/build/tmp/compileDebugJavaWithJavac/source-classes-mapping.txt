@@ -1,26 +1,27 @@
-com/example/risk_helper/activity/MainActivity.java
- com.example.risk_helper.activity.MainActivity
+com/example/risk_helper/other/InformationForWar.java
+ com.example.risk_helper.other.InformationForWar
 com/example/risk_helper/other/CalculatedListView.java
  com.example.risk_helper.other.CalculatedListView
-com/example/risk_helper/activity/InputFieldActivity.java
- com.example.risk_helper.activity.InputFieldActivity
+com/example/risk_helper/other/IntentPackageWar.java
+ com.example.risk_helper.other.IntentPackageWar
 com/example/risk_helper/BuildConfig.java
  com.example.risk_helper.BuildConfig
-com/example/risk_helper/other/CalculatedListViewAdapter.java
- com.example.risk_helper.other.CalculatedListViewAdapter
-com/example/risk_helper/activity/SpecificFieldActivity.java
- com.example.risk_helper.activity.SpecificFieldActivity
-com/example/risk_helper/activity/HelpActivity.java
- com.example.risk_helper.activity.HelpActivity
-com/example/risk_helper/activity/ResultOfCalculationActivity.java
- com.example.risk_helper.activity.ResultOfCalculationActivity
 com/example/risk_helper/other/IntentPackage.java
  com.example.risk_helper.other.IntentPackage
 com/example/risk_helper/other/IntentPackageWin.java
  com.example.risk_helper.other.IntentPackageWin
 com/example/risk_helper/activity/WinningActivity.java
  com.example.risk_helper.activity.WinningActivity
-com/example/risk_helper/other/IntentPackageWar.java
- com.example.risk_helper.other.IntentPackageWar
-com/example/risk_helper/other/InformationForWar.java
- com.example.risk_helper.other.InformationForWar
+com/example/risk_helper/activity/ResultOfCalculationActivity.java
+ com.example.risk_helper.activity.ResultOfCalculationActivity
+com/example/risk_helper/other/CalculatedListViewAdapter.java
+ com.example.risk_helper.other.CalculatedListViewAdapter
+com/example/risk_helper/activity/SpecificFieldActivity.java
+ com.example.risk_helper.activity.SpecificFieldActivity
+com/example/risk_helper/activity/HelpActivity.java
+ com.example.risk_helper.activity.HelpActivity
+com/example/risk_helper/activity/MainActivity.java
+ com.example.risk_helper.activity.MainActivity
+com/example/risk_helper/activity/InputFieldActivity.java
+ com.example.risk_helper.activity.InputFieldActivity
+ com.example.risk_helper.activity.InputFieldActivity$1

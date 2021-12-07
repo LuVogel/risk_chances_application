@@ -2537,6 +2537,9 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string alertNoAttacker
+string alertNoDefender
+string alertOver75
 string app_name
 string appbar_scrolling_view_behavior
 string attacker
@@ -2557,6 +2560,7 @@ string defender
 string defender_side_min_1
 string defender_side_min_2
 string defender_win_with
+string error
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2645,6 +2649,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string ok
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

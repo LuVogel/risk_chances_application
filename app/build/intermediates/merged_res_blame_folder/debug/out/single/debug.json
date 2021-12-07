@@ -8,12 +8,12 @@
         "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\layout\\activity_input_field.xml"
     },
     {
-        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_winning.xml.flat",
         "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\layout\\activity_winning.xml"
+    },
+    {
+        "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_result_of_calculation.xml.flat",

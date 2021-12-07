@@ -45,13 +45,9 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
                 defender5 = defenderArray[4], defender6 = defenderArray[5];
 
 
-
-
-        InformationForWar informationField1 = readFileWithProbabilities(attacker1, defender1);
-        CalculatedListView calculatedListViewField1 = new CalculatedListView(informationField1);
-        InformationForWar informationField2, informationField3, informationField4,
+        InformationForWar informationField1, informationField2, informationField3, informationField4,
                 informationField5, informationField6;
-        CalculatedListView calculatedListViewField2, calculatedListViewField3,
+        CalculatedListView calculatedListViewField1, calculatedListViewField2, calculatedListViewField3,
                 calculatedListViewField4, calculatedListViewField5, calculatedListViewField6;
 
         ArrayList<CalculatedListView> calculatedList = new ArrayList<CalculatedListView>();
@@ -62,7 +58,13 @@ public class ResultOfCalculationActivity extends AppCompatActivity {
                 "Win D");
         CalculatedListView headerForFields = new CalculatedListView(headerForWar);
         calculatedList.add(headerForFields);
-        calculatedList.add(calculatedListViewField1);
+
+
+        if (defender1 != 0) {
+            informationField1 = readFileWithProbabilities(attacker1, defender1);
+            calculatedListViewField1 = new CalculatedListView(informationField1);
+            calculatedList.add(calculatedListViewField1);
+        }
 
         if (defender2 != 0) {
             informationField2 = readFileWithProbabilities(attacker1, defender2);

@@ -2536,6 +2536,9 @@ int string abc_searchview_description_voice 0x7f100017
 int string abc_shareactionprovider_share_with 0x7f100018
 int string abc_shareactionprovider_share_with_application 0x7f100019
 int string abc_toolbar_collapse_description 0x7f10001a
+int string alertNoAttacker 0x7f100095
+int string alertNoDefender 0x7f100091
+int string alertOver75 0x7f100096
 int string app_name 0x7f10001b
 int string appbar_scrolling_view_behavior 0x7f10001c
 int string attacker 0x7f10001d
@@ -2556,6 +2559,7 @@ int string defender 0x7f10002b
 int string defender_side_min_1 0x7f10002c
 int string defender_side_min_2 0x7f10002d
 int string defender_win_with 0x7f10002e
+int string error 0x7f100092
 int string error_icon_content_description 0x7f10002f
 int string exposed_dropdown_menu_content_description 0x7f100030
 int string fab_transformation_scrim_behavior 0x7f100031
@@ -2644,6 +2648,7 @@ int string mtrl_picker_toggle_to_calendar_input_mode 0x7f100083
 int string mtrl_picker_toggle_to_day_selection 0x7f100084
 int string mtrl_picker_toggle_to_text_input_mode 0x7f100085
 int string mtrl_picker_toggle_to_year_selection 0x7f100086
+int string ok 0x7f100093
 int string password_toggle_content_description 0x7f100087
 int string path_password_eye 0x7f100088
 int string path_password_eye_mask_strike_through 0x7f100089
