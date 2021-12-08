@@ -54,12 +54,18 @@
     <string name="input_field_defending_units_on_field_5">Defending Units on Field 5:</string>
     <string name="input_field_defending_units_on_field_6">Defending Units on Field 6:</string>
     <string name="attacker"># A</string>
+    <string name="attacker_long">Number of Attackers</string>
     <string name="defender"># D</string>
+    <string name="defender_long">Number of Defenders</string>
     <string name="remaining_attacker">surv. A</string>
+    <string name="remaining_attacker_long">surviving Attacker</string>
     <string name="remaining_defender">surv. D</string>
+    <string name="remaining_defender_long">surviving Defender</string>
     <string name="attacker_win_with">Win A</string>
+    <string name="attacker_win_with_long">Win Attacker</string>
     <string name="both_minus_1">A-1 D-1</string>
     <string name="defender_win_with">Win D</string>
+    <string name="defender_win_with_long">Win Defender</string>
     <string name="attacker_side_min_2">A-2</string>
     <string name="attacker_side_min_1">A-1</string>
     <string name="defender_side_min_2">D-2</string>
@@ -70,5 +76,11 @@
     <string name="main_continue">Continue</string>
     <string name="main_help">Help</string>
 
+
+    <string name="error">Error</string>
+    <string name="ok">Ok</string>
+    <string name="alertNoDefender">Please enter at least troops for one defender-field</string>
+    <string name="alertNoAttacker">Please enter troops for attacker-field</string>
+    <string name="alertOver75">Input must be smaller than 76, system will set input automatically to 75</string>
 
 </resources>

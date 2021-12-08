@@ -50,11 +50,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="0.8"
-                android:orientation="vertical"
-                android:divider="@color/black"
                 android:background="@drawable/paper_background"
-                android:showDividers="end"
-                android:dividerHeight="1dip">
+                android:divider="@color/black"
+                android:dividerHeight="1dip"
+                android:orientation="vertical"
+                android:showDividers="end">
 
 
                 <View
@@ -76,23 +76,22 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/quick_hand"
-                        android:textSize="20dp"
+                        android:text="@string/attacker_long"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:text="@string/attacker"
-                        android:textAlignment="center">
+                        android:textSize="20dp">
 
                     </TextView>
 
                     <TextView
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
-                        android:text="@string/defender"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/quick_hand"
-                        android:textAlignment="center"
                         android:layout_weight="0.5"
-                        >
+                        android:fontFamily="@font/quick_hand"
+                        android:text="@string/defender_long"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
                 </LinearLayout>
@@ -105,61 +104,34 @@
                     android:weightSum="1">
 
                     <TextView
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.5"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/quick_hand"
                         android:id="@+id/attacker_specific_field"
-                        android:textAlignment="center">
-                    </TextView>
-                    <TextView
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
                         android:id="@+id/defender_specific_field"
-                        android:textAlignment="center">
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
                 </LinearLayout>
 
-
-                <LinearLayout
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal"
-                    android:weightSum="1"
-                    >
+                    android:layout_height="15dp">
 
-                    <TextView
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.5"
-                        android:fontFamily="@font/quick_hand"
-                        android:text="@string/remaining_attacker"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
-                        android:textAlignment="center">
+                </View>
 
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.5"
-                        android:fontFamily="@font/quick_hand"
-                        android:text="@string/remaining_defender"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
-                        android:textAlignment="center">
-
-                    </TextView>
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -173,10 +145,10 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/quick_hand"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
+                        android:text="@string/remaining_attacker_long"
                         android:textAlignment="center"
-                        android:id="@+id/remaining_attacker_specific_field">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
@@ -185,15 +157,52 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/remaining_defender_long"
                         android:textAlignment="center"
-                        android:textSize="20dp"
                         android:textColor="@color/black"
-                        android:id="@+id/remaining_defender_specific_field">
+                        android:textSize="20dp">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/remaining_attacker_specific_field"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/remaining_defender_specific_field"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/quick_hand"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
 
                 </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp">
+
+                </View>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -206,11 +215,11 @@
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/attacker_win_with_long"
                         android:textAlignment="center"
-                        android:text="@string/attacker_win_with">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
@@ -218,11 +227,11 @@
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/defender_win_with_long"
                         android:textAlignment="center"
-                        android:text="@string/defender_win_with">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
                 </LinearLayout>
@@ -232,33 +241,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_horizontal"
-                    android:textSize="20dp"
                     android:textColor="@color/black"
+                    android:textSize="20dp"
                     android:weightSum="1">
 
                     <TextView
+                        android:id="@+id/attacker_win_specific_field"
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
                         android:fontFamily="@font/quick_hand"
-                        android:id="@+id/attacker_win_specific_field">
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
-                    
+
 
                     <TextView
+                        android:id="@+id/defender_win_specific_field"
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/quick_hand"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:textAlignment="center"
-                        android:id="@+id/defender_win_specific_field">
-                    </TextView>
+                        android:textColor="@color/black"
+                        android:textSize="20dp"></TextView>
 
 
                 </LinearLayout>
@@ -281,11 +289,11 @@
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/attacker_side_min_2"
                         android:textAlignment="center"
-                        android:text="@string/attacker_side_min_2">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
@@ -293,11 +301,11 @@
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/attacker_side_min_1"
                         android:textAlignment="center"
-                        android:text="@string/attacker_side_min_1">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
@@ -305,11 +313,11 @@
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/both_minus_1"
                         android:textAlignment="center"
-                        android:text="@string/both_minus_1">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
@@ -317,11 +325,11 @@
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/defender_side_min_2"
                         android:textAlignment="center"
-                        android:text="@string/defender_side_min_2">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
@@ -329,21 +337,22 @@
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/quick_hand"
+                        android:text="@string/defender_side_min_1"
                         android:textAlignment="center"
-                        android:text="@string/defender_side_min_1">
+                        android:textColor="@color/black"
+                        android:textSize="20dp">
 
                     </TextView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
                     android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
                     android:weightSum="1">
 
                     <ImageButton
@@ -352,8 +361,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
                         android:contentDescription="@string/todo"
-                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck"
-                        android:src="@drawable/sub_two">
+                        android:src="@drawable/sub_two"
+                        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck">
 
                     </ImageButton>
 
@@ -363,8 +372,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
                         android:contentDescription="@string/todo"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:src="@drawable/sub_one">
+                        android:src="@drawable/sub_one"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
                     </ImageButton>
 
@@ -374,27 +383,28 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
                         android:contentDescription="@string/todo"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:src="@drawable/both_min_one">
+                        android:src="@drawable/both_min_one"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
                     </ImageButton>
 
                     <ImageButton
+                        android:id="@+id/subDefendOne"
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
-                        android:src="@drawable/sub_one"
-                        android:id="@+id/subDefendOne">
+                        android:src="@drawable/sub_one">
 
                     </ImageButton>
+
                     <ImageButton
                         android:id="@+id/subDefendTwo"
                         android:layout_width="0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:contentDescription="TODO"
                         android:src="@drawable/sub_two"
-                        android:contentDescription="TODO">
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
                     </ImageButton>
 

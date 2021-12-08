@@ -44,21 +44,21 @@
             </LinearLayout>
 
 
-            <ScrollView
+
+
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="0.6">
 
-
-                <FrameLayout
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/paper_background"
+                    android:scaleType="fitXY"/>
+                <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/paper_background"
-                        android:scaleType="fitXY"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -296,8 +296,10 @@
 
                     </LinearLayout>
 
-                </FrameLayout>
-            </ScrollView>
+                </ScrollView>
+
+
+            </FrameLayout>
 
 
             <LinearLayout
