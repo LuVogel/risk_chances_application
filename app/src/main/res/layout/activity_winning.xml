@@ -43,67 +43,62 @@
 
             </LinearLayout>
 
-            <ScrollView
+
+
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="0.8">
 
-                <FrameLayout
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/paper_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp">
+
+                    </View>
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/paper_background"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_gravity="center"
+                        android:src="@drawable/congrats">
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="20dp">
+                    </ImageView>
 
-                        </View>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/congrats">
+                    </View>
 
-                        </ImageView>
+                    <TextView
+                        android:id="@+id/winner_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:padding="15dp"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/quick_hand">
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp">
+                    </TextView>
 
-                        </View>
-
-                        <TextView
-                            android:id="@+id/winner_textView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:textSize="20dp"
-                            android:fontFamily="@font/quick_hand">
-
-                        </TextView>
+                </LinearLayout>
 
 
 
 
 
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-
-            </ScrollView>
+            </FrameLayout>
 
 
 

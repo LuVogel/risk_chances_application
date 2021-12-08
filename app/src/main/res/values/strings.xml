@@ -5,45 +5,47 @@
         calculator\"</string>
     <string name="help_overall2">For RISK-rules, please have a look at the rulebook, delivered with
         the game. </string>
-    <string name="help_overall3">Important for this app is to know how a war works. In a war is a
-        player attacking a field from another player. From the RISK rules, there is given, that an
-        attacker can attack with at most three dices and a defender defend with at most two
-        dices. After each throw of the dices, a dice-war ends. This is important, since now the
-        probabilities that someone wins, is going to be updated.</string>
+    <string name="help_overall3">Important for the usage of the app is the knowledge of how a war -
+        the principle concept of this game - works. Within a war, one player is attacking the field
+        of another player. The RISK rules state that the attacker can attack with at most three
+        dices whereby the defender can defend his field with at most two dices. A so-called dice-war
+        ends after each time the dices were thrown by both the attacker and the defender. Each time
+        when dices were thrown, the probabilities of the attacker or defender winning are updated.
+    </string>
 
-    <string name="help_field1">Enter your attacking units, as well as defending units which are
-        located on the fields, which you\'re planning to attack.</string>
-    <string name="help_field2">You must fill in at least your attacking units and the defending
-        units for field number 1. If the entered number one a field  is bigger than 75, then the units
-        on this field will be set to 75.</string>
-    <string name="help_field3">After all troops are entered as wished, press Calculate</string>
+    <string name="help_field1">Enter the attacking and the defending units for units located on the
+        fields which are going to be attacked.</string>
+    <string name="help_field2">At the beginning, the attacking units and the defending units for at
+        least one field must be entered. If the units exceed 75, they will be automatically reset to
+        75 - entering numbers bigger than 75 is not possible.</string>
+    <string name="help_field3">After all units are entered, please press \"Calculate\"</string>
 
-    <string name="help_calculation1">For each defending field which was entered before, there is
-        now a line shown with following values: </string>
-    <string name="help_calculation2">Number of Attacker, Number of Defender, Number of expected
-        remaining Attackers, Number of expected remaining Defenders, Probability that Attacker
-        wins, Probability that Defender wins</string>
-    <string name="help_calculation3">Caution: If the probability that one side wins is 100\% and the
-        other 0%, means not that one can not loose. The probability for the 0\% part is just small
-        enough that it has to be rounded to 0 and therefore the counter-probability is 100.</string>
-    <string name="help_calculation4">Choose one line which you\'re going to attack. Press this line
-        and the next screen will open</string>
+    <string name="help_calculation1">For each defending field entered within the step before, a line
+        with the following values is displayed: </string>
+    <string name="help_calculation2">Number of attacker, number of defender, number of expected
+        remaining attackers, number of expected remaining defenders, probability that attacker
+        wins, probability that defender wins</string>
+    <string name="help_calculation3">Note: If the winning probabilities are distributed as of 100%
+        and 0%, the 0% does not implicate no chance of winning but the probability is too little and
+        therefore is rounded to 0%.</string>
+    <string name="help_calculation4">By pressing a line, the attacker chooses which units are going
+        to be attacked and a new window will be opened.</string>
 
     <string name="help_playAndPress1">On top are the same values as before in the list, but now
         only for the chosen field.</string>
-    <string name="help_playAndPress2">Depending on current Attacker and Defender are multiple
+    <string name="help_playAndPress2">Depending on current attacker and defender are multiple
         buttons shown.</string>
     <string name="help_playAndPress3">The two buttons on the left side, are pressed if the attacker
-        lost one or two armies.</string>
+        lost one or two units.</string>
     <string name="help_playAndPress4">The two buttons on the right side are pressed if the defender
-        lost one or two armies.</string>
+        lost one or two units.</string>
     <string name="help_playAndPress5">The button in the middle is pressed if both sides lost one
-        army.</string>
+        unit.</string>
     <string name="help_playAndPress6">After each button-press, the values above will be updated.
         Press a button each time, a dice-war has ended</string>
 
 
-    <string name="input_field_1">Enter at least for field 1 numbers of Attacking and Defending Units</string>
+    <string name="input_field_1">Enter at least for field 1 numbers of attacking and defending Units</string>
 
     <string name="calculate_button">Calculate</string>
     <string name="input_field_defending_units_on_field_1">Defending Units on Field 1:</string>
@@ -54,18 +56,18 @@
     <string name="input_field_defending_units_on_field_5">Defending Units on Field 5:</string>
     <string name="input_field_defending_units_on_field_6">Defending Units on Field 6:</string>
     <string name="attacker"># A</string>
-    <string name="attacker_long">Number of Attackers</string>
+    <string name="attacker_long">Number of attackers</string>
     <string name="defender"># D</string>
-    <string name="defender_long">Number of Defenders</string>
+    <string name="defender_long">Number of defenders</string>
     <string name="remaining_attacker">surv. A</string>
-    <string name="remaining_attacker_long">surviving Attacker</string>
+    <string name="remaining_attacker_long">surviving attacker</string>
     <string name="remaining_defender">surv. D</string>
-    <string name="remaining_defender_long">surviving Defender</string>
+    <string name="remaining_defender_long">surviving defender</string>
     <string name="attacker_win_with">Win A</string>
-    <string name="attacker_win_with_long">Win Attacker</string>
+    <string name="attacker_win_with_long">Win attacker</string>
     <string name="both_minus_1">A-1 D-1</string>
     <string name="defender_win_with">Win D</string>
-    <string name="defender_win_with_long">Win Defender</string>
+    <string name="defender_win_with_long">Win defender</string>
     <string name="attacker_side_min_2">A-2</string>
     <string name="attacker_side_min_1">A-1</string>
     <string name="defender_side_min_2">D-2</string>
@@ -79,8 +81,8 @@
 
     <string name="error">Error</string>
     <string name="ok">Ok</string>
-    <string name="alertNoDefender">Please enter at least troops for one defender-field</string>
-    <string name="alertNoAttacker">Please enter troops for attacker-field</string>
-    <string name="alertOver75">Input must be smaller than 76, system will set input automatically to 75</string>
+    <string name="alertNoDefender">Please enter at least units for one defender-field</string>
+    <string name="alertNoAttacker">Please enter units for attacker-field</string>
+    <string name="alertOver75">Input is required to be smaller than 76 - input will be set to 75 automatically</string>
 
 </resources>

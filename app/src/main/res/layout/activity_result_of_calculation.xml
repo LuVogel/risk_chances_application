@@ -64,6 +64,7 @@
                     android:gravity="center"
                     android:text="@string/chose_field_of_interest"
                     android:textStyle="bold"
+                    android:padding="15dp"
                     android:fontFamily="@font/quick_hand"
                     android:textSize="25sp"
                     android:textColor="@color/black">
