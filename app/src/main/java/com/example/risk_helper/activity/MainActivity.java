@@ -18,12 +18,17 @@ public class MainActivity extends AppCompatActivity {
     Button welcomeContinueButton;
     Button welcomeHelpButton;
 
-
+    /**
+     * creates mainActivity, first activity shown on screen
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //first button to continue to InputFieldActivity
         welcomeContinueButton = findViewById(R.id.welcome_continue_button);
+        //second button to continue to HelpActivity
         welcomeHelpButton = findViewById(R.id.welcome_help_button);
 
         welcomeContinueButton.setOnClickListener(v -> {
