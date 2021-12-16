@@ -234,7 +234,6 @@
                         android:fontFamily="@font/quick_hand"
                         android:text="@string/defender_win_with_long"
                         android:textAlignment="center"
-                        android:padding="15dp"
                         android:textColor="@color/black"
                         android:textSize="20dp">
 

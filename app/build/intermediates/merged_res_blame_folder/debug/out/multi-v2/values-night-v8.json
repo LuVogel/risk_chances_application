@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\implementation\\project_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\implementation\\project_app\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

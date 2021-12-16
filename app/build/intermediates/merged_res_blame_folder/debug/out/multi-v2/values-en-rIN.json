@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\project\\project_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "D:\\Dokumente\\UniBasel\\5.Semester\\puzzles_and_games\\implementation\\project_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\vogel\\.gradle\\caches\\transforms-3\\255d63c0f9f8f5d12ab3191ffb377750\\transformed\\core-1.5.0\\res\\values-en-rIN\\values-en-rIN.xml",
